@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
+import jodhpurFortImg from '/jodhpur_fort.jpeg';
 
 export const Hero: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/65 via-blue-800/70 to-blue-900/65 z-10"></div>
         <img
-          src="/jodhpur_fort.jpeg"
+          src={jodhpurFortImg}
           alt="Jodhpur Blue City"
           className="w-full h-full object-cover"
         />

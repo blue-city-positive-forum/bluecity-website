@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import aboutImg from '/about.jpeg';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -58,7 +59,7 @@ export const About: React.FC = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-soft-lg">
               <img
-                src="/about.jpeg"
+                src={aboutImg}
                 alt="Rajasthani Culture"
                 className="w-full h-[500px] object-cover"
               />
