@@ -23,7 +23,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitl
           >
             <Link to={ROUTES.HOME} className="flex items-center gap-3">
               <img 
-                src="/bluecity_logo_nobg.png" 
+                src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
                 alt="Blue City Parivar Logo" 
                 className="h-14 w-14 object-contain"
               />
@@ -62,7 +62,7 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitl
             <div className="text-center text-white space-y-6">
               <div className="flex justify-center mb-8">
                 <img 
-                  src="/bluecity_logo_nobg.png" 
+                  src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
                   alt="Blue City Parivar Logo" 
                   className="h-32 w-32 object-contain drop-shadow-2xl"
                 />

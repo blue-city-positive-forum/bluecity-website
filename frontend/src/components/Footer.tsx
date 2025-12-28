@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/bluecity_logo_nobg.png" 
+                src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
                 alt="Blue City Parivar Logo" 
                 className="h-12 w-12 object-contain"
               />

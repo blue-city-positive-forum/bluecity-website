@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
           >
             <Link to={ROUTES.HOME} className="flex items-center gap-3">
               <img 
-                src="/bluecity_logo_nobg.png" 
+                src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
                 alt="Blue City Parivar Logo" 
                 className="h-12 w-12 object-contain"
               />
