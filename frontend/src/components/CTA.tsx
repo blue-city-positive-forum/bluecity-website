@@ -1,7 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Button } from './ui/Button';
+import { ROUTES } from '../utils/constants';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -34,6 +35,7 @@ const useInView = () => {
 export const CTA: React.FC = () => {
   const { ref, isInView } = useInView();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section id="contact" ref={ref} className="py-20 md:py-32 relative overflow-hidden">
@@ -92,19 +94,18 @@ export const CTA: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-white text-blue-city-primary hover:bg-blue-50 shadow-soft-lg text-lg px-10"
+            <button
+              onClick={() => navigate(ROUTES.JOIN_US)}
+              className="px-10 py-4 text-lg font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               {t('home.cta.becomeMember')}
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-city-primary text-lg px-10"
+            </button>
+            <button
+              onClick={() => navigate(ROUTES.CONTACT)}
+              className="px-10 py-4 text-lg font-semibold rounded-2xl border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-city-primary transition-all duration-300 hover:scale-105 active:scale-95"
             >
               {t('home.cta.contactUs')}
-            </Button>
+            </button>
           </motion.div>
 
           {/* Contact Info */}
@@ -142,15 +143,33 @@ export const CTA: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex justify-center gap-6 mt-12"
           >
-            {['Facebook', 'Instagram', 'WhatsApp'].map((social, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              >
-                <span className="text-white font-semibold text-sm">{social[0]}</span>
-              </a>
-            ))}
+            <a
+              href="https://facebook.com/bluecityparivar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="Facebook"
+            >
+              <span className="text-white font-semibold text-sm">F</span>
+            </a>
+            <a
+              href="https://instagram.com/bluecityparivar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="Instagram"
+            >
+              <span className="text-white font-semibold text-sm">I</span>
+            </a>
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              aria-label="WhatsApp"
+            >
+              <span className="text-white font-semibold text-sm">W</span>
+            </a>
           </motion.div>
         </motion.div>
       </div>

@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ROUTES } from '../utils/constants';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -32,24 +34,24 @@ export const Footer: React.FC = () => {
             <h4 className="font-semibold text-blue-city-text mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#about" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.ABOUT_WHO_WE_ARE} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.aboutUs')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#events" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.EVENTS} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.events')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.GALLERY} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.gallery')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.CONTACT} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.contact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,19 +61,19 @@ export const Footer: React.FC = () => {
             <h4 className="font-semibold text-blue-city-text mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="#" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.CONTACT} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.privacyPolicy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.CONTACT} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.termsOfService')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-city-primary transition-colors">
+                <Link to={ROUTES.JOIN_US} className="hover:text-blue-city-primary transition-colors">
                   {t('footer.membershipGuidelines')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

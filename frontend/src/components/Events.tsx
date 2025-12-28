@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Button } from './ui/Button';
+import { ROUTES } from '../utils/constants';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -65,6 +67,7 @@ const events = [
 export const Events: React.FC = () => {
   const { ref, isInView } = useInView();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section id="events" ref={ref} className="py-20 md:py-32 bg-blue-city-background relative">
@@ -145,7 +148,7 @@ export const Events: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
-          <Button size="lg" variant="primary">
+          <Button size="lg" variant="primary" onClick={() => navigate(ROUTES.EVENTS)}>
             {t('home.events.viewAllEvents')}
           </Button>
         </motion.div>

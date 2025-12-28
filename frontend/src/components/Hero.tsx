@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Button } from './ui/Button';
+import { ROUTES } from '../utils/constants';
 import jodhpurFortImg from '/jodhpur_fort.jpeg';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -54,12 +56,18 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-8"
           >
-            <Button size="md" variant="secondary" className="sm:text-base">
+            <button
+              onClick={() => navigate(ROUTES.JOIN_US)}
+              className="px-6 py-3 text-base sm:text-base font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
+            >
               {t('home.joinParivar')}
-            </Button>
-            <Button size="md" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-blue-city-primary sm:text-base">
+            </button>
+            <button
+              onClick={() => navigate(ROUTES.EVENTS)}
+              className="px-6 py-3 text-base sm:text-base font-semibold rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 active:scale-95"
+            >
               {t('home.exploreEvents')}
-            </Button>
+            </button>
           </motion.div>
 
           {/* Stats */}

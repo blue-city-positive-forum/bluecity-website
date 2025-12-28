@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { ROUTES } from '../utils/constants';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -66,6 +68,7 @@ const galleryImages = [
 export const Gallery: React.FC = () => {
   const { ref, isInView } = useInView();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section id="gallery" ref={ref} className="py-20 md:py-32 bg-white relative overflow-hidden">
@@ -128,7 +131,10 @@ export const Gallery: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <button className="text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors">
+          <button 
+            onClick={() => navigate(ROUTES.GALLERY)}
+            className="text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors cursor-pointer"
+          >
             {t('home.gallery.viewFullGallery')} →
           </button>
         </motion.div>
