@@ -330,6 +330,8 @@ After the first successful deployment, your site will be available at:
 https://chaimat.github.io/bluecity-jodhpur/
 ```
 
+**Note:** This is a project GitHub Pages site, so the base URL includes the repository name.
+
 ### Manual Deployment (Alternative)
 
 If you prefer to deploy manually:
@@ -362,6 +364,7 @@ git push origin main
 - ✅ Backend code is safely stored in the repo but NOT deployed
 - ✅ Only `frontend/` changes trigger deployment
 - ✅ The `base: '/bluecity-jodhpur/'` in `vite.config.ts` ensures assets load correctly
+- ✅ The `basename="/bluecity-jodhpur"` in `BrowserRouter` ensures routing works correctly
 - ✅ `.gitignore` files prevent `node_modules` and logs from being committed
 
 ---

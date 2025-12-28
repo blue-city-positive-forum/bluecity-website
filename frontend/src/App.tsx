@@ -58,7 +58,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bluecity-jodhpur">
       <LanguageProvider>
         <AlertContainer />
         <Suspense fallback={<PageLoader />}>
