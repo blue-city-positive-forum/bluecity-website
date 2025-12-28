@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import aboutImg from '/about.jpeg';
 
 const useInView = () => {
@@ -32,6 +33,7 @@ const useInView = () => {
 
 export const About: React.FC = () => {
   const { ref, isInView } = useInView();
+  const { t } = useTranslation();
 
   return (
     <section
@@ -40,8 +42,8 @@ export const About: React.FC = () => {
       className="py-20 md:py-32 bg-white relative overflow-hidden"
     >
       {/* Decorative Background Element */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-city-secondary/20 rounded-full blur-3xl -z-0"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-city-accent/10 rounded-full blur-3xl -z-0"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-city-secondary/30 rounded-full blur-3xl -z-0"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-city-accent/20 rounded-full blur-3xl -z-0"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -79,37 +81,33 @@ export const About: React.FC = () => {
           >
             <div>
               <h2 className="text-sm font-semibold text-blue-city-accent uppercase tracking-wider mb-2">
-                About Us
+                {t('home.about.subtitle')}
               </h2>
               <h3 className="text-4xl md:text-5xl font-bold text-blue-city-text">
-                A Community That Feels Like{' '}
-                <span className="text-gradient">Home</span>
+                {t('home.about.title')}{' '}
+                <span className="text-gradient">{t('home.about.titleHighlight')}</span>
               </h3>
             </div>
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                <strong className="text-blue-city-primary">Blue City Parivar</strong> is more than just a community—it's a 
-                family that brings together the vibrant spirit of Jodhpur to the heart of Ahmedabad.
+                <strong className="text-blue-city-primary">Blue City Parivar</strong> {t('home.about.paragraph1')}
               </p>
               <p>
-                We are a close-knit group of families from Jodhpur who have made Ahmedabad our home, 
-                yet we cherish our roots, culture, and traditions. Through regular gatherings, festivals, 
-                and celebrations, we create a space where our heritage thrives.
+                {t('home.about.paragraph2')}
               </p>
               <p>
-                Whether it's celebrating Diwali, Holi, or organizing cultural events, we come together 
-                to support each other, share our stories, and pass on our rich traditions to the next generation.
+                {t('home.about.paragraph3')}
               </p>
             </div>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-6 pt-6">
               {[
-                { icon: '🎉', title: 'Regular Events', desc: 'Monthly gatherings & festivals' },
-                { icon: '👨‍👩‍👧‍👦', title: 'Family Oriented', desc: 'All ages welcome' },
-                { icon: '🏛️', title: 'Cultural Heritage', desc: 'Preserving traditions' },
-                { icon: '🤝', title: 'Strong Network', desc: 'Support & friendship' },
+                { icon: '🎉', title: t('home.about.feature1Title'), desc: t('home.about.feature1Desc') },
+                { icon: '👨‍👩‍👧‍👦', title: t('home.about.feature2Title'), desc: t('home.about.feature2Desc') },
+                { icon: '🏛️', title: t('home.about.feature3Title'), desc: t('home.about.feature3Desc') },
+                { icon: '🤝', title: t('home.about.feature4Title'), desc: t('home.about.feature4Desc') },
               ].map((feature, idx) => (
                 <motion.div
                   key={idx}

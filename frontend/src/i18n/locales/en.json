@@ -1,0 +1,331 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "help": "Help",
+    "activities": "Activities",
+    "joinUs": "Join Us",
+    "matrimony": "Matrimony",
+    "contact": "Contact",
+    "admin": "Admin",
+    "myAccount": "My Account",
+    "login": "Login",
+    "logout": "Logout",
+    "adminPanel": "Admin Panel"
+  },
+  "about": {
+    "whoWeAre": "Who are we",
+    "managementTeam": "Management Team",
+    "vision": "Vision",
+    "mission": "Mission",
+    "objectives": "Objectives"
+  },
+  "help": {
+    "medical": "Medical",
+    "education": "Education",
+    "generalHelp": "General Help"
+  },
+  "activities": {
+    "socialWork": "Social Work",
+    "cultural": "Cultural",
+    "getTogether": "Get Together"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm"
+  },
+  "home": {
+    "title": "Blue City Parivar",
+    "subtitle": "Connecting the hearts of Jodhpur in Ahmedabad",
+    "welcome": "Welcome to Blue City Parivar",
+    "tagline": "Your home away from home",
+    "heroTitle": "Where Heart of Marwar Meets Soul of Ahmedabad",
+    "heroDescription": "A spirited Marwari community thriving in the heart of Gujarat, nurturing our heritage through social upliftment, preservation of cultural values, festive traditions, and enduring bonds.",
+    "joinParivar": "Join the Parivar",
+    "exploreEvents": "Explore Events",
+    "membersCount": "Members",
+    "eventsCount": "Events",
+    "yearsStrong": "Years Strong",
+    "about": {
+      "subtitle": "About Us",
+      "title": "A Community That Feels Like",
+      "titleHighlight": "Home",
+      "paragraph1": "is more than just a community—it's a family that brings together the vibrant spirit of Jodhpur to the heart of Ahmedabad.",
+      "paragraph2": "We are a close-knit group of families from Jodhpur who have made Ahmedabad our home, yet we cherish our roots, culture, and traditions. Through regular gatherings, festivals, and celebrations, we create a space where our heritage thrives.",
+      "paragraph3": "Whether it's celebrating Diwali, Holi, or organizing cultural events, we come together to support each other, share our stories, and pass on our rich traditions to the next generation.",
+      "feature1Title": "Regular Events",
+      "feature1Desc": "Monthly gatherings & festivals",
+      "feature2Title": "Family Oriented",
+      "feature2Desc": "All ages welcome",
+      "feature3Title": "Cultural Heritage",
+      "feature3Desc": "Preserving traditions",
+      "feature4Title": "Strong Network",
+      "feature4Desc": "Support & friendship"
+    },
+    "events": {
+      "subtitle": "Our Events",
+      "title": "Upcoming Celebrations &",
+      "titleHighlight": "Gatherings",
+      "description": "From festivals to cultural nights, we celebrate our traditions and create lasting memories together.",
+      "tableHeaders": {
+        "eventName": "Event Name",
+        "date": "Date",
+        "time": "Time",
+        "location": "Location",
+        "status": "Status"
+      },
+      "statusUpcoming": "Upcoming",
+      "statusDone": "Done",
+      "viewAllEvents": "View All Events"
+    },
+    "gallery": {
+      "subtitle": "Memories",
+      "title": "Our",
+      "titleHighlight": "Gallery",
+      "description": "Glimpses of our vibrant celebrations, cultural events, and moments of togetherness.",
+      "viewFullGallery": "View Full Gallery"
+    },
+    "stories": {
+      "subtitle": "Community Voices",
+      "title": "Stories from Our",
+      "titleHighlight": "Parivar",
+      "description": "Hear what our members have to say about being part of Blue City Parivar.",
+      "testimonial1Quote": "Joining Blue City Parivar was the best decision. It feels like home again in Ahmedabad. The warmth and support from everyone is incredible.",
+      "testimonial1Name": "Rajesh Rathore",
+      "testimonial1Role": "Member since 2018",
+      "testimonial2Quote": "My children are growing up connected to our roots. They learn our traditions, speak our language, and celebrate our festivals with pride.",
+      "testimonial2Name": "Priya Shekhawat",
+      "testimonial2Role": "Member since 2020",
+      "testimonial3Quote": "The community has been a pillar of support during tough times. More than members, we've become one big family.",
+      "testimonial3Name": "Vikram Singh",
+      "testimonial3Role": "Member since 2019",
+      "featuredQuote": "In Ahmedabad, we found a new home. In Blue City Parivar, we found our family."
+    },
+    "cta": {
+      "title": "Become Part of Our Family",
+      "description": "Join Blue City Parivar today and experience the warmth of Jodhpur in Ahmedabad.",
+      "descriptionLine2": "Lifetime membership for your entire family.",
+      "priceAmount": "₹7,000",
+      "priceLabel": "One-time Payment",
+      "lifetimeLabel": "Lifetime",
+      "lifetimeDesc": "Membership",
+      "familyLabel": "Entire",
+      "familyDesc": "Family Included",
+      "becomeMember": "Become a Member",
+      "contactUs": "Contact Us",
+      "emailLabel": "Email",
+      "whatsappLabel": "WhatsApp",
+      "locationLabel": "Location",
+      "locationValue": "Ahmedabad, Gujarat"
+    }
+  },
+  "footer": {
+    "title": "Blue City Parivar",
+    "description": "Connecting the hearts of Jodhpur in Ahmedabad. A community dedicated to preserving our heritage, celebrating our culture, and supporting each other.",
+    "registeredOrg": "A registered community organization",
+    "servingSince": "Serving Jodhpuris in Ahmedabad since 2015",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "events": "Events",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "membershipGuidelines": "Membership Guidelines",
+    "copyright": "Blue City Parivar. All rights reserved.",
+    "madeWith": "Made with ❤️ for the Jodhpuri community"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "loginTitle": "Login to Your Account",
+    "registerTitle": "Create New Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "signIn": "Sign In"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "contactInfo": "Contact Information",
+    "followUs": "Follow Us",
+    "responseTimes": "Response Times",
+    "responseTimesText": "We typically respond to all inquiries within 24-48 hours. For urgent matters, please call us directly or send a message on WhatsApp.",
+    "location": "Location",
+    "locationText": "Ahmedabad, Gujarat\nIndia",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "Chat with us on WhatsApp"
+  },
+  "matrimony": {
+    "title": "Matrimony",
+    "findMatch": "Find Your Perfect Match",
+    "createProfile": "Create Profile",
+    "viewProfiles": "View Profiles",
+    "myProfile": "My Profile",
+    "editProfile": "Edit Profile"
+  },
+  "pages": {
+    "whoWeAre": {
+      "title": "Who We Are",
+      "subtitle": "ABOUT US",
+      "intro": "A group of like-minded individuals originally from Jodhpur which is also known as Bluecity of India, and now residing in Ahmedabad, joined forces to establish the Bluecity Positive Forum (BPF). BPF is a public, not-for-profit company incorporated in India and registered under Section 8 of the Companies Act, 2013, with its registered office located in Ahmedabad, Gujarat.",
+      "visionLabel": "Our Vision",
+      "vision": "To build an inclusive, resilient, and culturally vibrant society by preserving heritage, promoting education and health, safeguarding the environment, and empowering communities for sustainable social and economic upliftment.",
+      "missionLabel": "Our Mission",
+      "mission": "United by shared roots and a common vision, the group is committed to participating as donors and social workers. Their mission is to support the broader community, preserve traditions and culture, empower youth and women, and foster a brighter future through goodwill and solidarity."
+    },
+    "managementTeam": {
+      "title": "Management Team",
+      "subtitle": "MANAGEMENT",
+      "intro": "The current directors are Advt. Mohanraj Mishrimal Singhi, Mr. Deepak Jain, and Mrs. Shelly Mayank Bapna. Major shareholders include CA Rajendra Agarwal, CA Vijay Kishan Mundra, Mr. Dinesh Golia, Advt. Gaurav Soni, Advt. Mohanraj Mishrimal Singhi, Mr. Deepak Jain, and Mr. Manish Jain. All promoters and directors are respected professionals and philanthropists:",
+      "members": [
+        {
+          "name": "Mr. M M Singhi",
+          "role": "Advocate",
+          "description": "A prominent advocate and head of the nationally recognized law firm Singhi & Co."
+        },
+        {
+          "name": "Mrs. Shelly Mayank Bapna",
+          "role": "Social Worker",
+          "description": "A social worker with over 20 years' experience managing projects with institutions such as the Blind People Association, Ahmedabad, and other notable NGOs."
+        },
+        {
+          "name": "Mr. Deepak Jain",
+          "role": "Industrialist",
+          "description": "An established industrialist who owns a garment manufacturing unit and serves on the board of the Gujarat Garment Manufacturing Association."
+        },
+        {
+          "name": "CA Rajendra Agarwal",
+          "role": "Chartered Accountant",
+          "description": "A practicing Chartered Accountant based in Ahmedabad for the last 40 years. He and his family are deeply committed to philanthropy, consistently dedicating their time and resources to various social causes."
+        },
+        {
+          "name": "CA V. K. Mundra",
+          "role": "Chartered Accountant",
+          "description": "A veteran professional with 40 years of practice in Ahmedabad, a well-known figure in the Marwari and Maheshwari communities, recognized for both his professional excellence and his charitable nature."
+        },
+        {
+          "name": "Shri Dinesh Goliya",
+          "role": "Business Leader",
+          "description": "Representing the family behind the renowned Madhur Gur brand, carries forward an 80-year-old business tradition in Gujarat. He is widely recognized for his charitable nature and active contribution to social welfare."
+        },
+        {
+          "name": "Advocate Shri Gaurav Soni",
+          "role": "IPR Specialist",
+          "description": "The founder and proprietor of the law firm Soni & Soni, specializing in Intellectual Property Rights (IPR). He is widely regarded as an expert in the field."
+        },
+        {
+          "name": "Shri Manish Jain",
+          "role": "Vice President, Adani Group",
+          "description": "A seasoned techno-commercial expert who holds the position of Vice President at Adani Group, backed by years of leadership in the corporate sector."
+        }
+      ]
+    },
+    "vision": {
+      "title": "Our Vision",
+      "subtitle": "VISION STATEMENT",
+      "statement": "To create an inclusive, resilient and culturally vibrant society by preserving heritage, advancing education and health, protecting the environment, and empowering communities for sustainable social and economic upliftment."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "subtitle": "MISSION STATEMENT",
+      "statement": "Our mission is to build a brighter, resilient community by honoring cultural values while equipping people to meet modern challenges—empowering every individual to thrive today and tomorrow."
+    },
+    "objectives": {
+      "title": "Our Objectives",
+      "subtitle": "OBJECTIVES",
+      "list": [
+        {
+          "title": "Education & Research",
+          "description": "Support academic programs and strengthen educational infrastructure to build a more resilient future."
+        },
+        {
+          "title": "Healthcare Access",
+          "description": "Provide medical treatment and develop healthcare facilities to serve those in need."
+        },
+        {
+          "title": "Skills & Livelihoods",
+          "description": "Empower individuals with practical skills and training to enhance employability and self-reliance."
+        },
+        {
+          "title": "Environmental Conservation",
+          "description": "Promote the sustainable use and protection of natural resources to safeguard the environment."
+        },
+        {
+          "title": "Cultural Preservation",
+          "description": "Preserve and promote traditional arts, music, and cultural heritage for future generations by constructive initiatives."
+        },
+        {
+          "title": "Community & Harmony",
+          "description": "Foster strong, inclusive communities that encourage social cohesion and mutual support."
+        }
+      ]
+    },
+    "medical": {
+      "title": "Medical Help",
+      "subtitle": "Healthcare support and assistance for our community members",
+      "content": "Content for Medical Help will be posted soon...",
+      "description": "We provide medical assistance and healthcare support to our community members, including connecting them with trusted healthcare professionals and facilities."
+    },
+    "education": {
+      "title": "Education Help",
+      "subtitle": "Educational support and guidance for our community",
+      "content": "Content for Education Help will be posted soon...",
+      "description": "We assist families with educational guidance, scholarship information, and connecting students with mentors and educational resources."
+    },
+    "generalHelp": {
+      "title": "General Help",
+      "subtitle": "Community support for all your needs",
+      "content": "Content for General Help will be posted soon...",
+      "description": "Whether you need assistance settling in Ahmedabad, finding local services, or just connecting with fellow community members, we're here to help."
+    },
+    "socialWork": {
+      "title": "Social Work",
+      "subtitle": "Making a positive impact in our community",
+      "content": "Content for Social Work will be posted soon...",
+      "description": "Our community actively participates in various social welfare activities, contributing to the betterment of society and helping those in need."
+    },
+    "cultural": {
+      "title": "Cultural Activities",
+      "subtitle": "Celebrating our rich heritage and traditions",
+      "content": "Content for Cultural Activities will be posted soon...",
+      "description": "We organize various cultural events, festivals, and celebrations to keep our Marwari traditions alive and pass them on to the next generation."
+    },
+    "getTogether": {
+      "title": "Get Together",
+      "subtitle": "Building bonds through social gatherings",
+      "content": "Content for Get Together will be posted soon...",
+      "description": "Regular get-togethers and social events where families can connect, share experiences, and strengthen the bonds that make us a true parivar."
+    }
+  }
+}
+

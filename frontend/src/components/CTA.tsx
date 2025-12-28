@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Button } from './ui/Button';
 
 const useInView = () => {
@@ -32,6 +33,7 @@ const useInView = () => {
 
 export const CTA: React.FC = () => {
   const { ref, isInView } = useInView();
+  const { t } = useTranslation();
 
   return (
     <section id="contact" ref={ref} className="py-20 md:py-32 relative overflow-hidden">
@@ -53,11 +55,11 @@ export const CTA: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Become Part of Our Family
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-12">
-            Join Blue City Parivar today and experience the warmth of Jodhpur in Ahmedabad.
-            <br />Lifetime membership for your entire family.
+            {t('home.cta.description')}
+            <br />{t('home.cta.descriptionLine2')}
           </p>
 
           {/* Membership Details */}
@@ -69,16 +71,16 @@ export const CTA: React.FC = () => {
           >
             <div className="grid md:grid-cols-3 gap-8 text-white">
               <div>
-                <div className="text-5xl font-bold mb-2">₹7,000</div>
-                <div className="text-blue-100">One-time Payment</div>
+                <div className="text-5xl font-bold mb-2">{t('home.cta.priceAmount')}</div>
+                <div className="text-blue-100">{t('home.cta.priceLabel')}</div>
               </div>
               <div>
-                <div className="text-5xl font-bold mb-2">Lifetime</div>
-                <div className="text-blue-100">Membership</div>
+                <div className="text-5xl font-bold mb-2">{t('home.cta.lifetimeLabel')}</div>
+                <div className="text-blue-100">{t('home.cta.lifetimeDesc')}</div>
               </div>
               <div>
-                <div className="text-5xl font-bold mb-2">Entire</div>
-                <div className="text-blue-100">Family Included</div>
+                <div className="text-5xl font-bold mb-2">{t('home.cta.familyLabel')}</div>
+                <div className="text-blue-100">{t('home.cta.familyDesc')}</div>
               </div>
             </div>
           </motion.div>
@@ -94,14 +96,14 @@ export const CTA: React.FC = () => {
               size="lg"
               className="bg-white text-blue-city-primary hover:bg-blue-50 shadow-soft-lg text-lg px-10"
             >
-              Become a Member
+              {t('home.cta.becomeMember')}
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-city-primary text-lg px-10"
             >
-              Contact Us
+              {t('home.cta.contactUs')}
             </Button>
           </motion.div>
 
@@ -114,22 +116,22 @@ export const CTA: React.FC = () => {
           >
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-3">📧</div>
-              <div className="font-semibold mb-1">Email</div>
+              <div className="font-semibold mb-1">{t('home.cta.emailLabel')}</div>
               <a href="mailto:info@bluecityparivar.com" className="text-blue-100 hover:text-white transition-colors">
                 info@bluecityparivar.com
               </a>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-3">📱</div>
-              <div className="font-semibold mb-1">WhatsApp</div>
+              <div className="font-semibold mb-1">{t('home.cta.whatsappLabel')}</div>
               <a href="tel:+919876543210" className="text-blue-100 hover:text-white transition-colors">
                 +91 98765 43210
               </a>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-3">📍</div>
-              <div className="font-semibold mb-1">Location</div>
-              <div className="text-blue-100">Ahmedabad, Gujarat</div>
+              <div className="font-semibold mb-1">{t('home.cta.locationLabel')}</div>
+              <div className="text-blue-100">{t('home.cta.locationValue')}</div>
             </div>
           </motion.div>
 

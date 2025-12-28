@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -64,11 +65,12 @@ const galleryImages = [
 
 export const Gallery: React.FC = () => {
   const { ref, isInView } = useInView();
+  const { t } = useTranslation();
 
   return (
     <section id="gallery" ref={ref} className="py-20 md:py-32 bg-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-city-primary/5 rounded-full blur-3xl -z-0"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-city-primary/15 rounded-full blur-3xl -z-0"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -79,13 +81,13 @@ export const Gallery: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-semibold text-blue-city-accent uppercase tracking-wider mb-2">
-            Memories
+            {t('home.gallery.subtitle')}
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold text-blue-city-text mb-4">
-            Our <span className="text-gradient">Gallery</span>
+            {t('home.gallery.title')} <span className="text-gradient">{t('home.gallery.titleHighlight')}</span>
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Glimpses of our vibrant celebrations, cultural events, and moments of togetherness.
+            {t('home.gallery.description')}
           </p>
         </motion.div>
 
@@ -127,7 +129,7 @@ export const Gallery: React.FC = () => {
           className="text-center mt-12"
         >
           <button className="text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors">
-            View Full Gallery →
+            {t('home.gallery.viewFullGallery')} →
           </button>
         </motion.div>
       </div>

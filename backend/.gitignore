@@ -60,3 +60,15 @@ Thumbs.db
 *.seed
 *.pid.lock
 
+
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+*.log
+.DS_Store
+coverage/
+.vscode/
+.idea/
+

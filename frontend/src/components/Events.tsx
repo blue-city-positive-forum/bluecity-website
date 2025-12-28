@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Button } from './ui/Button';
 
 const useInView = () => {
@@ -63,6 +64,7 @@ const events = [
 
 export const Events: React.FC = () => {
   const { ref, isInView } = useInView();
+  const { t } = useTranslation();
 
   return (
     <section id="events" ref={ref} className="py-20 md:py-32 bg-blue-city-background relative">
@@ -75,13 +77,13 @@ export const Events: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-semibold text-blue-city-accent uppercase tracking-wider mb-2">
-            Our Events
+            {t('home.events.subtitle')}
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold text-blue-city-text mb-4">
-            Upcoming Celebrations & <span className="text-gradient">Gatherings</span>
+            {t('home.events.title')} <span className="text-gradient">{t('home.events.titleHighlight')}</span>
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From festivals to cultural nights, we celebrate our traditions and create lasting memories together.
+            {t('home.events.description')}
           </p>
         </motion.div>
 
@@ -97,11 +99,11 @@ export const Events: React.FC = () => {
               <table className="w-full">
                 <thead>
                   <tr className="bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white">
-                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">Event Name</th>
-                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">Date</th>
-                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">Time</th>
-                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">Location</th>
-                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">Status</th>
+                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">{t('home.events.tableHeaders.eventName')}</th>
+                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">{t('home.events.tableHeaders.date')}</th>
+                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">{t('home.events.tableHeaders.time')}</th>
+                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">{t('home.events.tableHeaders.location')}</th>
+                    <th className="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold uppercase tracking-wider">{t('home.events.tableHeaders.status')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -125,7 +127,7 @@ export const Events: React.FC = () => {
                             ? 'bg-green-100 text-green-700' 
                             : 'bg-gray-100 text-gray-600'
                         }`}>
-                          {event.status}
+                          {event.status === 'Upcoming' ? t('home.events.statusUpcoming') : t('home.events.statusDone')}
                         </span>
                       </td>
                     </motion.tr>
@@ -144,7 +146,7 @@ export const Events: React.FC = () => {
           className="text-center"
         >
           <Button size="lg" variant="primary">
-            View All Events
+            {t('home.events.viewAllEvents')}
           </Button>
         </motion.div>
       </div>
