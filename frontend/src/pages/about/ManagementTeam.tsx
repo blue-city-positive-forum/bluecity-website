@@ -33,31 +33,21 @@ export const ManagementTeam: React.FC = () => {
           </div>
         </div>
 
+        {/* Content Section */}
         <div className="max-w-5xl mx-auto px-4 py-12 md:py-16">
-          {/* Introduction */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-12"
+            className="bg-white rounded-lg shadow-sm p-8 md:p-12"
           >
-            <div className="bg-white rounded-md shadow-sm p-8 border border-gray-200">
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                {t('pages.managementTeam.intro')}
-              </p>
-            </div>
-          </motion.div>
+            <p className="text-lg text-gray-700 leading-relaxed mb-10">
+              {t('pages.managementTeam.intro')}
+            </p>
 
-          {/* Team Members */}
-          <div className="space-y-6">
-            {members.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                <div className="bg-white rounded-md shadow-sm p-6 md:p-8 border-l-4 border-blue-city-primary hover:shadow-md transition-shadow">
+            <div className="space-y-8">
+              {members.map((member, index) => (
+                <div key={index} className={index > 0 ? "border-t border-gray-200 pt-8" : ""}>
                   <div className="mb-3">
                     <h3 className="text-xl font-bold text-blue-city-text">
                       {member.name}
@@ -70,9 +60,9 @@ export const ManagementTeam: React.FC = () => {
                     {member.description}
                   </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </Layout>

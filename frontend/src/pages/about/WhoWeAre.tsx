@@ -11,7 +11,7 @@ export const WhoWeAre: React.FC = () => {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white py-16 md:py-24">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-5xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -27,30 +27,20 @@ export const WhoWeAre: React.FC = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-          {/* Introduction */}
+        {/* Content Section */}
+        <div className="max-w-5xl mx-auto px-4 py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-12"
+            className="bg-white rounded-lg shadow-sm p-8 md:p-12"
           >
-            <div className="bg-white rounded-md shadow-sm p-8 border border-gray-200">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t('pages.whoWeAre.intro')}
-              </p>
-            </div>
-          </motion.div>
+            <p className="text-lg text-gray-700 leading-relaxed mb-10">
+              {t('pages.whoWeAre.intro')}
+            </p>
 
-          {/* Vision & Mission */}
-          <div className="space-y-8">
-            {/* Vision */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="bg-white rounded-md shadow-sm p-8 border-l-4 border-blue-city-primary">
+            <div className="space-y-8">
+              <div>
                 <h2 className="text-2xl font-bold text-blue-city-text mb-4">
                   {t('pages.whoWeAre.visionLabel')}
                 </h2>
@@ -58,15 +48,8 @@ export const WhoWeAre: React.FC = () => {
                   {t('pages.whoWeAre.vision')}
                 </p>
               </div>
-            </motion.div>
 
-            {/* Mission */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="bg-white rounded-md shadow-sm p-8 border-l-4 border-blue-city-accent">
+              <div className="border-t border-gray-200 pt-8">
                 <h2 className="text-2xl font-bold text-blue-city-text mb-4">
                   {t('pages.whoWeAre.missionLabel')}
                 </h2>
@@ -74,8 +57,8 @@ export const WhoWeAre: React.FC = () => {
                   {t('pages.whoWeAre.mission')}
                 </p>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </Layout>

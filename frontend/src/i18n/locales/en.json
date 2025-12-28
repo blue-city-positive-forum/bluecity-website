@@ -296,12 +296,6 @@
       "content": "Content for Medical Help will be posted soon...",
       "description": "We provide medical assistance and healthcare support to our community members, including connecting them with trusted healthcare professionals and facilities."
     },
-    "education": {
-      "title": "Education Help",
-      "subtitle": "Educational support and guidance for our community",
-      "content": "Content for Education Help will be posted soon...",
-      "description": "We assist families with educational guidance, scholarship information, and connecting students with mentors and educational resources."
-    },
     "generalHelp": {
       "title": "General Help",
       "subtitle": "Community support for all your needs",
@@ -310,21 +304,99 @@
     },
     "socialWork": {
       "title": "Social Work",
-      "subtitle": "Making a positive impact in our community",
-      "content": "Content for Social Work will be posted soon...",
-      "description": "Our community actively participates in various social welfare activities, contributing to the betterment of society and helping those in need."
+      "subtitle": "ACTIVITIES",
+      "intro": "Bluecity Positive Forum is a recognized social organization dedicated to community upliftment. Key initiatives centered around social welfare and public services.",
+      "summaryTitle": "Summary of the group's initiatives over the past year:",
+      "initiatives": [
+        {
+          "title": "Social Empowerment & Welfare",
+          "description": "The group operates as a public entity focused on \"social work activities without accommodation,\" targeting broad community development goals in the Ahmedabad and Jodhpur regions."
+        },
+        {
+          "title": "Regional Advocacy",
+          "description": "It actively champions local causes in Jodhpur Division (the \"Blue City\") & Ahmedabad, participating in forums that address critical infrastructure and community needs."
+        },
+        {
+          "title": "Strategic Partnerships",
+          "description": "The forum engages with other social networks and corporate social responsibility (CSR) initiatives to scale its impact, often collaborating on regional symposiums and nation-building dialogues."
+        },
+        {
+          "title": "Leadership-Driven Outreach",
+          "description": "Led by directors such as Shelly Mayank Bapna and Deepak Jain, the organization has focused on building a transparent framework for grassroots social intervention."
+        }
+      ]
     },
     "cultural": {
       "title": "Cultural Activities",
-      "subtitle": "Celebrating our rich heritage and traditions",
-      "content": "Content for Cultural Activities will be posted soon...",
-      "description": "We organize various cultural events, festivals, and celebrations to keep our Marwari traditions alive and pass them on to the next generation."
+      "subtitle": "ACTIVITIES",
+      "intro": "Bluecity Positive Forum is actively involved in safeguarding Rajasthani culture and traditions. It regularly organises programs to cultivate traditional value system in future generation. It also plays a vital role in preserving our cultural heritage, from traditional arts and music to our culinary customs and festivals."
     },
     "getTogether": {
       "title": "Get Together",
-      "subtitle": "Building bonds through social gatherings",
-      "content": "Content for Get Together will be posted soon...",
-      "description": "Regular get-togethers and social events where families can connect, share experiences, and strengthen the bonds that make us a true parivar."
+      "subtitle": "ACTIVITIES",
+      "intro": "Brotherhood is the cornerstone of any social community. To maintain a vibrant and engaged Marwari group, the forum hosts regular gatherings centered around cultural themes. These events are designed to preserve our rich heritage and traditions, encouraging the use of our native language and customs to instill these values in the younger generation."
+    },
+    "education": {
+      "title": "Student Scholarship",
+      "subtitle": "HELP",
+      "intro": "About Scholarship Scheme",
+      "purpose": {
+        "title": "Purpose of the Scheme",
+        "description": "Provide Scholarship amounts to the students in need of financial assistance."
+      },
+      "definitions": {
+        "title": "Definitions",
+        "description": "In this document, masculine pronouns include the feminine, and singular terms include the plural, unless the context suggests otherwise. The bold and highlighted terms used throughout are defined as follows."
+      },
+      "committee": {
+        "title": "Committee Members",
+        "description": "Committee Members means the Members of the Scholarship Committee decided by the board of directors of Bluecity Positive Forum."
+      },
+      "eligibility": {
+        "title": "Eligibility to participate in Scheme",
+        "description": "The following shall be the minimum eligible criteria for an applicant to participate in the Scheme. The Scholarship Committee reserves right to alter amends the same."
+      },
+      "educationalReq": {
+        "title": "Educational Requirements",
+        "description": "The students/applicants pursuing the following will be eligible:",
+        "table": [
+          {
+            "level": "Upto HSC (10+2) Standard level",
+            "amount": "Upto Rs.25000/- or the actual cost of fees as decided by the committee."
+          },
+          {
+            "level": "Graduation (College Education)",
+            "amount": "Actual cost of fees or Upto Rs.35000/- as decided by the committee."
+          },
+          {
+            "level": "Professional Courses (Commerce, Science, Arts or any academicals fields)",
+            "amount": "Actual cost of fees or Upto Rs.40000/- as decided by the committee. (to be disbursed in 2/3 yearly instalments)"
+          }
+        ],
+        "note": "Number of students shall be decided by the Scholarship/Education Aid committee as authorized by the Board of Bluecity Positive Forum"
+      },
+      "marksReq": {
+        "title": "Minimum Marks & Institution",
+        "description": "The Student applying for scholarship above must have obtained a minimum of 50% marks in the final examinations of the last class passed by him with good character. The candidate must be pursing his studies from a recognized Board like State Board of Secondary Education, C.B.S.E, I.C.S.E etc. or through a recognized institution run by the Central or State Government or an institution aided by Government (Central or State) /UGC. If the institution does not fall under any of the above category then it should be affiliated to a recognized university/Board/Institution or the course should be recognized by the Government (Central or State) or any statutory authority."
+      },
+      "incomeReq": {
+        "title": "Income of Parent/Guardian",
+        "description": "The Total Annual income of the applicants' Parents/Guardian/ Family should not exceed Rs.750000/- (Rupees Seven Lacs Fifty Thousand only) per financial year."
+      },
+      "residenceReq": {
+        "title": "Residence Requirement",
+        "description": "Open to students residing anywhere in India, provided their ancestral or native origin belongs to the Jodhpur Division (Marwar), Rajasthan."
+      }
+    },
+    "matrimonyHome": {
+      "title": "Matrimony",
+      "subtitle": "Bridging hearts and heritage to unite soul mates within our community",
+      "tagline": "The Trusted Matrimonial Network for the Global Marwari Community",
+      "intro": "By the Community, For the Community. We know what matters most to our families: our traditions, our culture, and our dreams. This platform is tailor-made to help you find a right partner who truly understands your way of life. Join us in bringing families together, just like the old days, but with a modern touch.",
+      "features": [
+        "Heart-Led Matchmaking",
+        "Vetted Profiles with a Human Touch"
+      ]
     }
   }
 }

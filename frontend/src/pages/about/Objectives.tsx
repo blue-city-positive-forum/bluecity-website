@@ -32,17 +32,17 @@ export const Objectives: React.FC = () => {
           </div>
         </div>
 
+        {/* Content Section */}
         <div className="max-w-5xl mx-auto px-4 py-12 md:py-16">
-          {/* Objectives List */}
-          <div className="space-y-6">
-            {objectives.map((objective, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                <div className="bg-white rounded-md shadow-sm p-6 md:p-8 border-l-4 border-blue-city-primary hover:shadow-md transition-shadow">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="bg-white rounded-lg shadow-sm p-8 md:p-12"
+          >
+            <div className="space-y-8">
+              {objectives.map((objective, index) => (
+                <div key={index} className={index > 0 ? "border-t border-gray-200 pt-8" : ""}>
                   <h3 className="text-xl font-bold text-blue-city-text mb-3">
                     {objective.title}
                   </h3>
@@ -50,9 +50,9 @@ export const Objectives: React.FC = () => {
                     {objective.description}
                   </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </Layout>

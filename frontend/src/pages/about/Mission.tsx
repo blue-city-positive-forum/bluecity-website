@@ -11,7 +11,7 @@ export const Mission: React.FC = () => {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white py-16 md:py-24">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-5xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -27,18 +27,17 @@ export const Mission: React.FC = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-          {/* Mission Statement */}
+        {/* Content Section */}
+        <div className="max-w-5xl mx-auto px-4 py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
+            className="bg-white rounded-lg shadow-sm p-10 md:p-16"
           >
-            <div className="bg-white rounded-md shadow-sm p-10 md:p-12 border-l-4 border-blue-city-accent">
-              <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
-                {t('pages.mission.statement')}
-              </p>
-            </div>
+            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center">
+              {t('pages.mission.statement')}
+            </p>
           </motion.div>
         </div>
       </div>
