@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3 mb-4">
               <img 
                 src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
-                alt="Blue City Parivar Logo" 
+                alt="Blue City Positive Forum Logo" 
                 className="h-12 w-12 object-contain"
               />
               <h3 className="text-2xl font-bold text-gradient">{t('footer.title')}</h3>
@@ -39,13 +39,18 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to={ROUTES.EVENTS} className="hover:text-blue-city-primary transition-colors">
-                  {t('footer.events')}
+                <Link to={ROUTES.ABOUT_MANAGEMENT_TEAM} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.managementTeam')}
                 </Link>
               </li>
               <li>
-                <Link to={ROUTES.GALLERY} className="hover:text-blue-city-primary transition-colors">
-                  {t('footer.gallery')}
+                <Link to={ROUTES.FESTIVALS} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.festivals')}
+                </Link>
+              </li>
+              <li>
+                <Link to={ROUTES.MATRIMONY} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.matrimony')}
                 </Link>
               </li>
               <li>
@@ -56,23 +61,28 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Help & Activities */}
           <div>
-            <h4 className="font-semibold text-blue-city-text mb-4">{t('footer.legal')}</h4>
+            <h4 className="font-semibold text-blue-city-text mb-4">{t('footer.helpAndActivities')}</h4>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <Link to={ROUTES.CONTACT} className="hover:text-blue-city-primary transition-colors">
-                  {t('footer.privacyPolicy')}
+                <Link to={ROUTES.HELP_EDUCATION} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.education')}
                 </Link>
               </li>
               <li>
-                <Link to={ROUTES.CONTACT} className="hover:text-blue-city-primary transition-colors">
-                  {t('footer.termsOfService')}
+                <Link to={ROUTES.HELP_MEDICAL} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.medical')}
                 </Link>
               </li>
               <li>
-                <Link to={ROUTES.JOIN_US} className="hover:text-blue-city-primary transition-colors">
-                  {t('footer.membershipGuidelines')}
+                <Link to={ROUTES.ACTIVITIES_SOCIAL_WORK} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.socialWork')}
+                </Link>
+              </li>
+              <li>
+                <Link to={ROUTES.ACTIVITIES_CULTURAL} className="hover:text-blue-city-primary transition-colors">
+                  {t('footer.cultural')}
                 </Link>
               </li>
             </ul>

@@ -11,6 +11,7 @@ const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })));
 const Events = lazy(() => import('./pages/Events').then((m) => ({ default: m.Events })));
+const Festivals = lazy(() => import('./pages/Festivals').then((m) => ({ default: m.Festivals })));
 const Gallery = lazy(() => import('./pages/Gallery').then((m) => ({ default: m.Gallery })));
 const Login = lazy(() => import('./pages/Login').then((m) => ({ default: m.Login })));
 const LoginSuccess = lazy(() => import('./pages/LoginSuccess').then((m) => ({ default: m.LoginSuccess })));
@@ -68,6 +69,7 @@ function App() {
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
           <Route path={ROUTES.EVENTS} element={<Events />} />
+          <Route path={ROUTES.FESTIVALS} element={<Festivals />} />
           <Route path={ROUTES.GALLERY} element={<Gallery />} />
 
           {/* About Subsection Routes */}

@@ -55,7 +55,7 @@ export const JoinUs: React.FC = () => {
       await initiatePayment(
         orderData.orderId,
         orderData.amount,
-        'Blue City Parivar - Lifetime Membership',
+        'Blue City Positive Forum - Lifetime Membership',
         user?.email,
         user?.name
       );
@@ -88,7 +88,7 @@ export const JoinUs: React.FC = () => {
               Login Required
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Please login to become a member of Blue City Parivar
+              Please login to become a member of Blue City Positive Forum
             </p>
             <Button size="lg" onClick={() => navigate(ROUTES.LOGIN)}>
               Go to Login
@@ -134,7 +134,7 @@ export const JoinUs: React.FC = () => {
             Become a <span className="text-gradient">Lifetime Member</span>
           </h1>
           <p className="text-xl text-gray-600">
-            Join Blue City Parivar and enjoy exclusive benefits for your entire family
+            Join Blue City Positive Forum and enjoy exclusive benefits for your entire family
           </p>
         </div>
 

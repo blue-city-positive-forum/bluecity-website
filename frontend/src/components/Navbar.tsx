@@ -41,9 +41,6 @@ export const Navbar: React.FC = () => {
       dropdown: [
         { name: t('about.whoWeAre'), path: ROUTES.ABOUT_WHO_WE_ARE },
         { name: t('about.managementTeam'), path: ROUTES.ABOUT_MANAGEMENT_TEAM },
-        { name: t('about.vision'), path: ROUTES.ABOUT_VISION },
-        { name: t('about.mission'), path: ROUTES.ABOUT_MISSION },
-        { name: t('about.objectives'), path: ROUTES.ABOUT_OBJECTIVES },
       ],
     },
     {
@@ -62,7 +59,7 @@ export const Navbar: React.FC = () => {
         { name: t('activities.getTogether'), path: ROUTES.ACTIVITIES_GET_TOGETHER },
       ],
     },
-    { name: t('nav.joinUs'), path: ROUTES.JOIN_US },
+    // { name: t('nav.joinUs'), path: ROUTES.JOIN_US }, // Hidden temporarily
     { name: t('nav.matrimony'), path: ROUTES.MATRIMONY },
     { name: t('nav.contact'), path: ROUTES.CONTACT },
   ];
@@ -89,10 +86,10 @@ export const Navbar: React.FC = () => {
             <Link to={ROUTES.HOME} className="flex items-center gap-3">
               <img 
                 src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
-                alt="Blue City Parivar Logo" 
+                alt="Blue City Positive Forum Logo" 
                 className="h-12 w-12 object-contain"
               />
-              <h1 className="text-2xl font-bold text-gradient">Blue City Parivar</h1>
+              <h1 className="text-base sm:text-lg md:text-xl font-bold text-gradient whitespace-nowrap">Blue City Positive Forum</h1>
             </Link>
           </motion.div>
 
@@ -203,11 +200,7 @@ export const Navbar: React.FC = () => {
                   {t('nav.logout')}
                 </Button>
               </>
-            ) : (
-              <Link to={ROUTES.LOGIN}>
-                <Button size="sm">{t('nav.login')}</Button>
-              </Link>
-            )}
+            ) : null /* Login button hidden temporarily */}
           </div>
 
           {/* Mobile menu button */}
@@ -368,11 +361,7 @@ export const Navbar: React.FC = () => {
                   {t('nav.logout')}
                 </Button>
               </>
-            ) : (
-              <Link to={ROUTES.LOGIN} onClick={() => setIsOpen(false)}>
-                <Button className="w-full mt-4">{t('nav.login')}</Button>
-              </Link>
-            )}
+            ) : null /* Login button hidden temporarily in mobile */}
           </motion.div>
         )}
       </div>

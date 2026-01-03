@@ -20,6 +20,7 @@ export const ROUTES = {
   CONTACT: '/contact',
   GALLERY: '/gallery',
   EVENTS: '/events',
+  FESTIVALS: '/festivals',
   LOGIN: '/login',
   LOGIN_SUCCESS: '/login/success',
   LOGIN_FAIL: '/login/fail',

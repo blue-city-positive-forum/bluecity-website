@@ -91,7 +91,7 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                <strong className="text-blue-city-primary">Blue City Parivar</strong> {t('home.about.paragraph1')}
+                <strong className="text-blue-city-primary">Blue City Positive Forum</strong> {t('home.about.paragraph1')}
               </p>
               <p>
                 {t('home.about.paragraph2')}

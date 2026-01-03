@@ -6,7 +6,7 @@
     "activities": "Activities",
     "joinUs": "Join Us",
     "matrimony": "Matrimony",
-    "contact": "Contact",
+    "contact": "Contact Us",
     "admin": "Admin",
     "myAccount": "My Account",
     "login": "Login",
@@ -14,20 +14,20 @@
     "adminPanel": "Admin Panel"
   },
   "about": {
-    "whoWeAre": "Who are we",
+    "whoWeAre": "Who We Are",
     "managementTeam": "Management Team",
     "vision": "Vision",
     "mission": "Mission",
     "objectives": "Objectives"
   },
   "help": {
-    "medical": "Medical",
-    "education": "Education",
+    "medical": "Medical Help",
+    "education": "Student Scholarship",
     "generalHelp": "General Help"
   },
   "activities": {
     "socialWork": "Social Work",
-    "cultural": "Cultural",
+    "cultural": "Cultural Activities",
     "getTogether": "Get Together"
   },
   "common": {
@@ -52,14 +52,15 @@
     "confirm": "Confirm"
   },
   "home": {
-    "title": "Blue City Parivar",
-    "subtitle": "Connecting the hearts of Jodhpur in Ahmedabad",
-    "welcome": "Welcome to Blue City Parivar",
+    "title": "Blue City Positive Forum",
+    "subtitle": "Connecting Marwaris in Ahmedabad",
+    "welcome": "Welcome to Blue City Positive Forum",
     "tagline": "Your home away from home",
     "heroTitle": "Where Heart of Marwar Meets Soul of Ahmedabad",
     "heroDescription": "A spirited Marwari community thriving in the heart of Gujarat, nurturing our heritage through social upliftment, preservation of cultural values, festive traditions, and enduring bonds.",
     "joinParivar": "Join the Parivar",
     "exploreEvents": "Explore Events",
+    "ourFestivals": "Our Festivals",
     "membersCount": "Members",
     "eventsCount": "Events",
     "yearsStrong": "Years Strong",
@@ -67,8 +68,8 @@
       "subtitle": "About Us",
       "title": "A Community That Feels Like",
       "titleHighlight": "Home",
-      "paragraph1": "is more than just a community—it's a family that brings together the vibrant spirit of Jodhpur to the heart of Ahmedabad.",
-      "paragraph2": "We are a close-knit group of families from Jodhpur who have made Ahmedabad our home, yet we cherish our roots, culture, and traditions. Through regular gatherings, festivals, and celebrations, we create a space where our heritage thrives.",
+      "paragraph1": "is more than just a community—it's a family that brings together the vibrant Marwari spirit to the heart of Ahmedabad.",
+      "paragraph2": "We are a close-knit group of Marwari families who have made Ahmedabad our home, yet we cherish our roots, culture, and traditions. Through regular gatherings, festivals, and celebrations, we create a space where our heritage thrives.",
       "paragraph3": "Whether it's celebrating Diwali, Holi, or organizing cultural events, we come together to support each other, share our stories, and pass on our rich traditions to the next generation.",
       "feature1Title": "Regular Events",
       "feature1Desc": "Monthly gatherings & festivals",
@@ -106,8 +107,8 @@
       "subtitle": "Community Voices",
       "title": "Stories from Our",
       "titleHighlight": "Parivar",
-      "description": "Hear what our members have to say about being part of Blue City Parivar.",
-      "testimonial1Quote": "Joining Blue City Parivar was the best decision. It feels like home again in Ahmedabad. The warmth and support from everyone is incredible.",
+      "description": "Hear what our members have to say about being part of Blue City Positive Forum.",
+      "testimonial1Quote": "Joining Blue City Positive Forum was the best decision. It feels like home again in Ahmedabad. The warmth and support from everyone is incredible.",
       "testimonial1Name": "Rajesh Rathore",
       "testimonial1Role": "Member since 2018",
       "testimonial2Quote": "My children are growing up connected to our roots. They learn our traditions, speak our language, and celebrate our festivals with pride.",
@@ -116,11 +117,11 @@
       "testimonial3Quote": "The community has been a pillar of support during tough times. More than members, we've become one big family.",
       "testimonial3Name": "Vikram Singh",
       "testimonial3Role": "Member since 2019",
-      "featuredQuote": "In Ahmedabad, we found a new home. In Blue City Parivar, we found our family."
+      "featuredQuote": "In Ahmedabad, we found a new home. In Blue City Positive Forum, we found our family."
     },
     "cta": {
       "title": "Become Part of Our Family",
-      "description": "Join Blue City Parivar today and experience the warmth of Jodhpur in Ahmedabad.",
+      "description": "Join Blue City Positive Forum today and experience the warmth of Marwari culture in Ahmedabad.",
       "descriptionLine2": "Lifetime membership for your entire family.",
       "priceAmount": "₹7,000",
       "priceLabel": "One-time Payment",
@@ -137,21 +138,29 @@
     }
   },
   "footer": {
-    "title": "Blue City Parivar",
-    "description": "Connecting the hearts of Jodhpur in Ahmedabad. A community dedicated to preserving our heritage, celebrating our culture, and supporting each other.",
+    "title": "Blue City Positive Forum",
+    "description": "Connecting Marwaris in Ahmedabad. A community dedicated to preserving our heritage, celebrating our culture, and supporting each other.",
     "registeredOrg": "A registered community organization",
-    "servingSince": "Serving Jodhpuris in Ahmedabad since 2015",
+    "servingSince": "Serving the Marwari community in Ahmedabad since 2015",
     "quickLinks": "Quick Links",
     "aboutUs": "About Us",
+    "managementTeam": "Management Team",
+    "festivals": "Festivals",
+    "matrimony": "Matrimony",
     "events": "Events",
     "gallery": "Gallery",
     "contact": "Contact",
+    "helpAndActivities": "Help & Activities",
+    "education": "Student Scholarship",
+    "medical": "Medical Help",
+    "socialWork": "Social Work",
+    "cultural": "Cultural Activities",
     "legal": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "membershipGuidelines": "Membership Guidelines",
-    "copyright": "Blue City Parivar. All rights reserved.",
-    "madeWith": "Made with ❤️ for the Jodhpuri community"
+    "copyright": "Blue City Positive Forum. All rights reserved.",
+    "madeWith": "Made with ❤️ for the Marwari community"
   },
   "auth": {
     "email": "Email",
@@ -167,7 +176,7 @@
     "signIn": "Sign In"
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Contact Us",
     "subtitle": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
     "name": "Your Name",
     "email": "Email Address",
@@ -196,7 +205,7 @@
   "pages": {
     "whoWeAre": {
       "title": "Who We Are",
-      "subtitle": "ABOUT US",
+      "subtitle": "About",
       "intro": "A group of like-minded individuals originally from Jodhpur which is also known as Bluecity of India, and now residing in Ahmedabad, joined forces to establish the Bluecity Positive Forum (BPF). BPF is a public, not-for-profit company incorporated in India and registered under Section 8 of the Companies Act, 2013, with its registered office located in Ahmedabad, Gujarat.",
       "visionLabel": "Our Vision",
       "vision": "To build an inclusive, resilient, and culturally vibrant society by preserving heritage, promoting education and health, safeguarding the environment, and empowering communities for sustainable social and economic upliftment.",
@@ -205,7 +214,7 @@
     },
     "managementTeam": {
       "title": "Management Team",
-      "subtitle": "MANAGEMENT",
+      "subtitle": "About",
       "intro": "The current directors are Advt. Mohanraj Mishrimal Singhi, Mr. Deepak Jain, and Mrs. Shelly Mayank Bapna. Major shareholders include CA Rajendra Agarwal, CA Vijay Kishan Mundra, Mr. Dinesh Golia, Advt. Gaurav Soni, Advt. Mohanraj Mishrimal Singhi, Mr. Deepak Jain, and Mr. Manish Jain. All promoters and directors are respected professionals and philanthropists:",
       "members": [
         {
@@ -252,17 +261,17 @@
     },
     "vision": {
       "title": "Our Vision",
-      "subtitle": "VISION STATEMENT",
+      "subtitle": "About",
       "statement": "To create an inclusive, resilient and culturally vibrant society by preserving heritage, advancing education and health, protecting the environment, and empowering communities for sustainable social and economic upliftment."
     },
     "mission": {
       "title": "Our Mission",
-      "subtitle": "MISSION STATEMENT",
+      "subtitle": "About",
       "statement": "Our mission is to build a brighter, resilient community by honoring cultural values while equipping people to meet modern challenges—empowering every individual to thrive today and tomorrow."
     },
     "objectives": {
       "title": "Our Objectives",
-      "subtitle": "OBJECTIVES",
+      "subtitle": "About",
       "list": [
         {
           "title": "Education & Research",
@@ -292,19 +301,17 @@
     },
     "medical": {
       "title": "Medical Help",
-      "subtitle": "Healthcare support and assistance for our community members",
-      "content": "Content for Medical Help will be posted soon...",
-      "description": "We provide medical assistance and healthcare support to our community members, including connecting them with trusted healthcare professionals and facilities."
+      "subtitle": "Help",
+      "content": "We provide medical assistance and healthcare support to our community members, including connecting them with trusted healthcare professionals and facilities."
     },
     "generalHelp": {
       "title": "General Help",
-      "subtitle": "Community support for all your needs",
-      "content": "Content for General Help will be posted soon...",
-      "description": "Whether you need assistance settling in Ahmedabad, finding local services, or just connecting with fellow community members, we're here to help."
+      "subtitle": "Help",
+      "content": "Whether you need assistance settling in Ahmedabad, finding local services, or just connecting with fellow community members, we're here to help."
     },
     "socialWork": {
       "title": "Social Work",
-      "subtitle": "ACTIVITIES",
+      "subtitle": "Activities",
       "intro": "Bluecity Positive Forum is a recognized social organization dedicated to community upliftment. Key initiatives centered around social welfare and public services.",
       "summaryTitle": "Summary of the group's initiatives over the past year:",
       "initiatives": [
@@ -328,17 +335,17 @@
     },
     "cultural": {
       "title": "Cultural Activities",
-      "subtitle": "ACTIVITIES",
+      "subtitle": "Activities",
       "intro": "Bluecity Positive Forum is actively involved in safeguarding Rajasthani culture and traditions. It regularly organises programs to cultivate traditional value system in future generation. It also plays a vital role in preserving our cultural heritage, from traditional arts and music to our culinary customs and festivals."
     },
     "getTogether": {
       "title": "Get Together",
-      "subtitle": "ACTIVITIES",
-      "intro": "Brotherhood is the cornerstone of any social community. To maintain a vibrant and engaged Marwari group, the forum hosts regular gatherings centered around cultural themes. These events are designed to preserve our rich heritage and traditions, encouraging the use of our native language and customs to instill these values in the younger generation."
+      "subtitle": "Activities",
+      "intro": "To maintain a vibrant and engaged Marwari group, the forum hosts regular gatherings centered around cultural themes. These events are designed to preserve our rich heritage and traditions, encouraging the use of our native language and customs to instill these values in the younger generation."
     },
     "education": {
       "title": "Student Scholarship",
-      "subtitle": "HELP",
+      "subtitle": "Help",
       "intro": "About Scholarship Scheme",
       "purpose": {
         "title": "Purpose of the Scheme",
@@ -386,16 +393,76 @@
       "residenceReq": {
         "title": "Residence Requirement",
         "description": "Open to students residing anywhere in India, provided their ancestral or native origin belongs to the Jodhpur Division (Marwar), Rajasthan."
+      },
+      "applicationForm": {
+        "title": "Apply for Scholarship",
+        "description": "Please fill out the application form below with accurate information. Our committee will review your application and contact you regarding the next steps.",
+        "note": "Note: Only students with above 50% marks in the last academic year are eligible to apply.",
+        "troubleViewing": "Having trouble viewing the form?",
+        "openInNewTab": "Open in new tab"
       }
     },
     "matrimonyHome": {
       "title": "Matrimony",
-      "subtitle": "Bridging hearts and heritage to unite soul mates within our community",
-      "tagline": "The Trusted Matrimonial Network for the Global Marwari Community",
-      "intro": "By the Community, For the Community. We know what matters most to our families: our traditions, our culture, and our dreams. This platform is tailor-made to help you find a right partner who truly understands your way of life. Join us in bringing families together, just like the old days, but with a modern touch.",
-      "features": [
-        "Heart-Led Matchmaking",
-        "Vetted Profiles with a Human Touch"
+      "subtitle": "Finding Life Partners",
+      "intro": "By the Community, For the Community. We know what matters most to our families: our traditions, our culture, and our dreams. This platform is tailor-made to help you find a right partner who truly understands your way of life.",
+      "formTitle": "Submit Your Matrimony Details",
+      "formDescription": "Please fill out the form below with accurate information about yourself or your family member who is looking for a life partner. Our team will review your submission and get in touch with you.",
+      "formNote": "All information provided will be kept confidential and shared only with interested families within our community.",
+      "troubleViewing": "Having trouble viewing the form?",
+      "openInNewTab": "Open in new tab"
+    },
+    "festivals": {
+      "title": "Our Festivals",
+      "subtitle": "Celebrations",
+      "intro": "Celebrating our rich cultural heritage and traditions together through vibrant festivals and joyous gatherings.",
+      "festivalsListTitle": "Festival List 2026",
+      "festivalsListDescription": "Key festivals and celebrations we observe throughout the year.",
+      "tableHeaders": {
+        "srNo": "Sr. No.",
+        "marwadiMonth": "Marwadi Month",
+        "calendarMonth": "Calendar Month",
+        "date": "Date",
+        "festival": "Festival",
+        "day": "Day"
+      },
+      "calendarTitle": "Festival Calendar 2026",
+      "calendarDescription": "View our complete festival calendar with all the important dates and celebrations throughout the year.",
+      "calendarFileName": "Marwari Calendar",
+      "downloadButton": "Download",
+      "troubleViewing": "Having trouble viewing the calendar?",
+      "openInNewTab": "Open in new tab",
+      "festivalsList": [
+        {"marwadiMonth": "Magh", "calendarMonth": "January", "date": "25th", "festival": "Devnarayan Jayanti", "day": "Sunday"},
+        {"marwadiMonth": "Phagun", "calendarMonth": "February", "date": "15th", "festival": "Maha Shivratri", "day": "Sunday"},
+        {"marwadiMonth": "Phagun", "calendarMonth": "March", "date": "2nd", "festival": "Holika Dahan", "day": "Monday"},
+        {"marwadiMonth": "Phagun", "calendarMonth": "March", "date": "3rd", "festival": "Rango wali Holi", "day": "Tuesday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "10th", "festival": "Sheetala Satam (Dando)", "day": "Tuesday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "19th", "festival": "Chaitra Navratri Prarambh", "day": "Thursday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "21st", "festival": "Gangaur", "day": "Saturday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "20th", "festival": "Cheti chand", "day": "Friday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "25th", "festival": "Chaitra Navpad Oli Prarambh", "day": "Wednesday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "26th", "festival": "Ramnavmi", "day": "Thursday"},
+        {"marwadiMonth": "Chaitra", "calendarMonth": "March", "date": "31st", "festival": "Shri Mahavir Jayanti", "day": "Tuesday"},
+        {"marwadiMonth": "Vaishakh", "calendarMonth": "April", "date": "19th", "festival": "Aakha Teej", "day": "Sunday"},
+        {"marwadiMonth": "Asadh", "calendarMonth": "July", "date": "29th", "festival": "Guru Purnima", "day": "Wednesday"},
+        {"marwadiMonth": "Sravan", "calendarMonth": "August", "date": "15th", "festival": "Hariyali Teej", "day": "Saturday"},
+        {"marwadiMonth": "Sravan", "calendarMonth": "August", "date": "28th", "festival": "Rakhi", "day": "Friday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "August", "date": "31st", "festival": "Sauudi Teej (Kajree Teej)", "day": "Monday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "September", "date": "4th", "festival": "Janmashtmi", "day": "Friday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "September", "date": "7th", "festival": "Bach Baras", "day": "Monday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "September", "date": "14th", "festival": "Ganesh Chaturthi", "day": "Monday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "September", "date": "16th", "festival": "Samvatsari", "day": "Wednesday"},
+        {"marwadiMonth": "Badau", "calendarMonth": "September", "date": "21st", "festival": "Ramdev Gana Jayanti (Baba Ri Beej)", "day": "Monday"},
+        {"marwadiMonth": "Asoj", "calendarMonth": "October", "date": "11th", "festival": "Navratras Prarambh", "day": "Sunday"},
+        {"marwadiMonth": "Asoj", "calendarMonth": "October", "date": "11th", "festival": "Maharaja Agrasen Jayanti", "day": "Sunday"},
+        {"marwadiMonth": "Asoj", "calendarMonth": "October", "date": "17th", "festival": "Aashoj Navpad Oli Prarambh", "day": "Saturday"},
+        {"marwadiMonth": "Asoj", "calendarMonth": "October", "date": "19th", "festival": "Durga Ashtami", "day": "Monday"},
+        {"marwadiMonth": "Asoj", "calendarMonth": "October", "date": "21st", "festival": "Vijaya Dashmior Dashera", "day": "Wednesday"},
+        {"marwadiMonth": "Kartik", "calendarMonth": "October", "date": "29th", "festival": "Karva Choth", "day": "Thursday"},
+        {"marwadiMonth": "Kartik", "calendarMonth": "November", "date": "8th", "festival": "Deepawali", "day": "Sunday"},
+        {"marwadiMonth": "Kartik", "calendarMonth": "November", "date": "9th", "festival": "Govardhan Puja", "day": "Monday"},
+        {"marwadiMonth": "Kartik", "calendarMonth": "November", "date": "11th", "festival": "Bhaiya Duj", "day": "Wednesday"}
       ]
     }
   }

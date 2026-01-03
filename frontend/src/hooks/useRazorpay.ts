@@ -49,7 +49,7 @@ export const useRazorpay = ({ onSuccess, onFailure }: UseRazorpayOptions) => {
           key: RAZORPAY_KEY_ID,
           amount: amount,
           currency: 'INR',
-          name: 'Blue City Parivar',
+          name: 'Blue City Positive Forum',
           description: description,
           order_id: orderId,
           prefill: {

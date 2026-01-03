@@ -17,7 +17,7 @@ export const About: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold text-blue-city-text mb-4">
-            About <span className="text-gradient">Blue City Parivar</span>
+            About <span className="text-gradient">Blue City Positive Forum</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Connecting the hearts of Jodhpur in Ahmedabad since 2015
@@ -35,7 +35,7 @@ export const About: React.FC = () => {
               <h2 className="text-3xl font-bold text-blue-city-text mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  <strong className="text-blue-city-primary">Blue City Parivar</strong> was born out of a simple yet powerful idea: 
+                  <strong className="text-blue-city-primary">Blue City Positive Forum</strong> was born out of a simple yet powerful idea: 
                   to create a home away from home for families from Jodhpur living in Ahmedabad.
                 </p>
                 <p>
@@ -251,7 +251,7 @@ export const About: React.FC = () => {
             </p>
             <a href="/joinus">
               <button className="px-8 py-4 bg-blue-city-primary text-white font-semibold rounded-2xl hover:bg-blue-700 transition-colors shadow-lg">
-                Join Blue City Parivar
+                Join Blue City Positive Forum
               </button>
             </a>
           </Card>

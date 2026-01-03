@@ -2,27 +2,65 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/layout/Layout';
+import { GraduationCap, FileText, Users, CheckCircle2, BookOpen, TrendingUp, DollarSign, MapPin } from 'lucide-react';
 
 export const Education: React.FC = () => {
   const { t } = useTranslation();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
   
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white py-16 md:py-24">
-          <div className="max-w-5xl mx-auto px-4">
+        <div className="relative bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white py-20 md:py-28 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="max-w-6xl mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
-              <p className="text-blue-100 text-sm uppercase tracking-wider mb-3">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-blue-100 text-sm uppercase tracking-widest mb-4 font-semibold"
+              >
                 {t('pages.education.subtitle')}
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold">
+              </motion.p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">
                 {t('pages.education.title')}
               </h1>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="w-24 h-1 bg-white mx-auto rounded-full"
+              />
             </motion.div>
           </div>
         </div>
@@ -32,82 +70,90 @@ export const Education: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white rounded-lg shadow-sm p-8 md:p-12"
+            transition={{ delay: 0.3 }}
+            className="space-y-10"
           >
-            <h2 className="text-2xl font-bold text-blue-city-text mb-8">
-              {t('pages.education.intro')}
-            </h2>
+            {/* Introduction */}
+            <div className="text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                {t('pages.education.intro')}
+              </h2>
+            </div>
 
-            <div className="space-y-8">
-              {/* Purpose */}
-              <div>
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  01. {t('pages.education.purpose.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.purpose.description')}
-                </p>
-              </div>
+            {/* Purpose */}
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <GraduationCap className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.education.purpose.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.purpose.description')}
+              </p>
+            </div>
 
-              {/* Definitions */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  02. {t('pages.education.definitions.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.definitions.description')}
-                </p>
-              </div>
+            {/* Definitions */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <FileText className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.education.definitions.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.definitions.description')}
+              </p>
+            </div>
 
-              {/* Committee Members */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  03. {t('pages.education.committee.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.committee.description')}
-                </p>
-              </div>
+            {/* Committee Members */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <Users className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.education.committee.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.committee.description')}
+              </p>
+            </div>
 
-              {/* Eligibility */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  {t('pages.education.eligibility.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.eligibility.description')}
-                </p>
-              </div>
+            {/* Eligibility */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <CheckCircle2 className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.education.eligibility.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.eligibility.description')}
+              </p>
+            </div>
 
-              {/* Educational Requirements */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-4">
-                  A. {t('pages.education.educationalReq.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {t('pages.education.educationalReq.description')}
-                </p>
-                
-                <div className="overflow-x-auto mb-4">
-                  <table className="w-full border-collapse border border-gray-300">
+            {/* Educational Requirements - Card with Table */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <BookOpen className="w-6 h-6 text-blue-city-primary" />
+                A. {t('pages.education.educationalReq.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {t('pages.education.educationalReq.description')}
+              </p>
+              
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
                     <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">
+                      <tr className="bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white">
+                        <th className="px-4 py-3 text-left font-semibold">
                           Educational Level
                         </th>
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">
+                        <th className="px-4 py-3 text-left font-semibold">
                           Maximum Scholarship Amount
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       {t('pages.education.educationalReq.table', { returnObjects: true }).map((row: any, index: number) => (
-                        <tr key={index} className="hover:bg-gray-50">
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
+                        <tr key={index} className="border-b border-gray-200 hover:bg-blue-50/50 transition-colors">
+                          <td className="px-4 py-3 text-gray-700">
                             {row.level}
                           </td>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
+                          <td className="px-4 py-3 text-gray-700 font-semibold">
                             {row.amount}
                           </td>
                         </tr>
@@ -115,39 +161,88 @@ export const Education: React.FC = () => {
                     </tbody>
                   </table>
                 </div>
-                
-                <p className="text-sm text-gray-600 italic">
-                  {t('pages.education.educationalReq.note')}
+              </div>
+              
+              <p className="text-sm text-gray-500 italic mt-4 bg-gray-50 p-3 rounded-lg">
+                {t('pages.education.educationalReq.note')}
+              </p>
+            </div>
+
+            {/* Minimum Marks & Institution */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <TrendingUp className="w-6 h-6 text-blue-city-primary" />
+                B. {t('pages.education.marksReq.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.marksReq.description')}
+              </p>
+            </div>
+
+            {/* Income Requirement */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <DollarSign className="w-6 h-6 text-blue-city-primary" />
+                C. {t('pages.education.incomeReq.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.incomeReq.description')}
+              </p>
+            </div>
+
+            {/* Residence Requirement */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-blue-city-primary" />
+                D. {t('pages.education.residenceReq.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.education.residenceReq.description')}
+              </p>
+            </div>
+
+            {/* Application Form Section */}
+            <div className="border-t border-gray-200 pt-12">
+              <div className="mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {t('pages.education.applicationForm.title')}
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+                  {t('pages.education.applicationForm.description')}
+                </p>
+                <p className="text-sm text-blue-city-primary font-semibold bg-blue-50 p-3 rounded-lg max-w-2xl mx-auto">
+                  {t('pages.education.applicationForm.note')}
                 </p>
               </div>
 
-              {/* Minimum Marks & Institution */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  B. {t('pages.education.marksReq.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.marksReq.description')}
-                </p>
+              {/* Google Form Embed */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="relative w-full bg-gray-50">
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSciRk1tAUX-N3s4YwRLcwAwMMU0koV67ECzcBfkS467vbju7w/viewform?embedded=true"
+                    className="w-full h-[800px] md:h-[1200px]"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title={t('pages.education.applicationForm.title')}
+                  >
+                    Loading…
+                  </iframe>
+                </div>
               </div>
 
-              {/* Income Requirement */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  C. {t('pages.education.incomeReq.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.incomeReq.description')}
-                </p>
-              </div>
-
-              {/* Residence Requirement */}
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-xl font-bold text-blue-city-text mb-3">
-                  D. {t('pages.education.residenceReq.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('pages.education.residenceReq.description')}
+              {/* Fallback message */}
+              <div className="mt-4 text-center text-sm text-gray-600">
+                <p>
+                  {t('pages.education.applicationForm.troubleViewing')}
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSciRk1tAUX-N3s4YwRLcwAwMMU0koV67ECzcBfkS467vbju7w/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-city-primary hover:underline ml-1 font-semibold"
+                  >
+                    {t('pages.education.applicationForm.openInNewTab')}
+                  </a>
                 </p>
               </div>
             </div>
