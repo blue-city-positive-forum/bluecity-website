@@ -27,16 +27,23 @@ const ManagementTeam = lazy(() => import('./pages/about/ManagementTeam').then((m
 const Vision = lazy(() => import('./pages/about/Vision').then((m) => ({ default: m.Vision })));
 const Mission = lazy(() => import('./pages/about/Mission').then((m) => ({ default: m.Mission })));
 const Objectives = lazy(() => import('./pages/about/Objectives').then((m) => ({ default: m.Objectives })));
+const OurHistory = lazy(() => import('./pages/about/OurHistory').then((m) => ({ default: m.OurHistory })));
 
 // Help subsection pages
 const Medical = lazy(() => import('./pages/help/Medical').then((m) => ({ default: m.Medical })));
 const Education = lazy(() => import('./pages/help/Education').then((m) => ({ default: m.Education })));
 const GeneralHelp = lazy(() => import('./pages/help/GeneralHelp').then((m) => ({ default: m.GeneralHelp })));
+const GeneralRules = lazy(() => import('./pages/help/GeneralRules').then((m) => ({ default: m.GeneralRules })));
 
 // Activities subsection pages
 const SocialWork = lazy(() => import('./pages/activities/SocialWork').then((m) => ({ default: m.SocialWork })));
 const Cultural = lazy(() => import('./pages/activities/Cultural').then((m) => ({ default: m.Cultural })));
 const GetTogether = lazy(() => import('./pages/activities/GetTogether').then((m) => ({ default: m.GetTogether })));
+
+// Gallery pages
+const SocialWorkGallery = lazy(() => import('./pages/gallery/SocialWorkGallery').then((m) => ({ default: m.SocialWorkGallery })));
+const CommunityGallery = lazy(() => import('./pages/gallery/CommunityGallery').then((m) => ({ default: m.CommunityGallery })));
+const PressCoverage = lazy(() => import('./pages/gallery/PressCoverage').then((m) => ({ default: m.PressCoverage })));
 
 // Matrimony pages
 const MatrimonyHome = lazy(() => import('./pages/matrimony/MatrimonyHome').then((m) => ({ default: m.MatrimonyHome })));
@@ -78,16 +85,23 @@ function App() {
           <Route path={ROUTES.ABOUT_VISION} element={<Vision />} />
           <Route path={ROUTES.ABOUT_MISSION} element={<Mission />} />
           <Route path={ROUTES.ABOUT_OBJECTIVES} element={<Objectives />} />
+          <Route path={ROUTES.ABOUT_HISTORY} element={<OurHistory />} />
 
           {/* Help Subsection Routes */}
           <Route path={ROUTES.HELP_MEDICAL} element={<Medical />} />
           <Route path={ROUTES.HELP_EDUCATION} element={<Education />} />
           <Route path={ROUTES.HELP_GENERAL} element={<GeneralHelp />} />
+          <Route path={ROUTES.HELP_RULES} element={<GeneralRules />} />
 
           {/* Activities Subsection Routes */}
           <Route path={ROUTES.ACTIVITIES_SOCIAL_WORK} element={<SocialWork />} />
           <Route path={ROUTES.ACTIVITIES_CULTURAL} element={<Cultural />} />
           <Route path={ROUTES.ACTIVITIES_GET_TOGETHER} element={<GetTogether />} />
+
+          {/* Gallery Routes */}
+          <Route path={ROUTES.GALLERY_SOCIAL_WORK} element={<SocialWorkGallery />} />
+          <Route path={ROUTES.GALLERY_COMMUNITY} element={<CommunityGallery />} />
+          <Route path={ROUTES.GALLERY_PRESS} element={<PressCoverage />} />
 
           {/* Auth Routes */}
           <Route path={ROUTES.LOGIN} element={<Login />} />

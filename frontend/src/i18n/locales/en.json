@@ -4,6 +4,7 @@
     "about": "About",
     "help": "Help",
     "activities": "Activities",
+    "gallery": "Gallery",
     "joinUs": "Join Us",
     "matrimony": "Matrimony",
     "contact": "Contact Us",
@@ -18,17 +19,24 @@
     "managementTeam": "Management Team",
     "vision": "Vision",
     "mission": "Mission",
-    "objectives": "Objectives"
+    "objectives": "Objectives",
+    "history": "Our History"
   },
   "help": {
     "medical": "Medical Help",
     "education": "Student Scholarship",
-    "generalHelp": "General Help"
+    "generalHelp": "General Help",
+    "rules": "General Rules & Regulations"
   },
   "activities": {
     "socialWork": "Social Work",
     "cultural": "Cultural Activities",
     "getTogether": "Get Together"
+  },
+  "gallery": {
+    "socialWork": "Social Work",
+    "community": "Community Get Together",
+    "press": "Press Coverage"
   },
   "common": {
     "loading": "Loading...",
@@ -299,6 +307,38 @@
         }
       ]
     },
+    "ourHistory": {
+      "title": "Our History",
+      "subtitle": "About",
+      "imagePlaceholder": "Image placeholder - Add your Marwar heritage photos here",
+      "poem": {
+        "line1": "म्याने भावै मुरधर देस री माटी,",
+        "line2": "म्हारे आंगणिये री ओळू आवे, जद याद सतावे दिन राती।",
+        "line3": "कदे मैं मुळकता हा, कदे मैं खेलता हा,",
+        "line4": "बीं धोरां री धरती माथे, सगळा मिळ-जुल'र रहता हा।"
+      },
+      "historyTitle": "History Of Marwar",
+      "historyContent": [
+        "Marwar refers to the area governed by the erstwhile princely state of Jodhpur, comprising present-day districts of Jodhpur, Barmer, Jalore, Nagaur, and Pali. The name Marwar is commonly believed to derive from the Sanskrit word \"Maru\" (मरु), meaning desert, and a regional suffix \"wār\" or \"vāra\", meaning region or land. Thus, Marwar can be interpreted as \"the region of the desert\". Historically, the area was also referred to as \"Maru-bhumi\" (मरुभूमि) meaning desert land, and also has been interpreted as 'land of death and thirst' in folklore.",
+        "The history of Marwar is closely intertwined with the lineage of the Rathore Vansh (Rathore dynasty). The origin of the Rathores has been a subject of debate among historians, with varying perspectives and interpretations about their roots.",
+        "Kingdom of Marwar, also known as Jodhpur State during the modern era, was a kingdom in the Marwar region from 1243 to 1818 and a princely state under British rule from 1818 to 1947. It was established in Pali by Rao Siha, possibly a migrant Gahadavala (Kannauj) noble, in 1243. His successors continued to struggle against regional powers for domination and 9 out of 15 rulers till 1438 died in combat. In 1395, its capital was changed to Mandore by Rao Chunda of Mandore and to Jodhpur in 1459 by Rao Jodha.",
+        "Jodha constructed a new capital fort on a hilltop 6 miles south of Mandore named Mehrangarh. The city came to be known by his name. Thus the city of Jodhpur was settled. Soon, he expanded his territory greatly. One of his sons, Bika captured Janglu which he named Bikaner after himself and became its Rao.",
+        "Under Maldeo Rathore who ruled Marwar from 1532 to 1562, Marwar rose to great power. Maldeo was able to capture Ajmer, Nagaur, Jalore and Bikaner. Maldeo before his death held the districts of Jodhpur, Sojat, Jaitaran, Phalodi, Siwana, Pokhran, Jalore, Sanchore, Merta, Barmer, Kotra and some parts of Jaisalmer. Majority of these regions are still known as Marwar.",
+        "Veer Durgadas Rathore, one of the most celebrated and respected generals of Marwar, is renowned for protecting the infant Ajit Singh—the sole heir of Maharaja Jaswant Singh—from Mughal threats. A master strategist in guerrilla warfare and skilled in forging diplomatic alliances, he safeguarded Marwar's sovereignty and ensured its independence until Ajit Singh was restored to the throne following Aurangzeb's death in 1707.",
+        "In 1843, when Maharaja Man Singh (ruled 1803–1843) died without a son and without having adopted an heir. The nobles and state officials were left to select a successor from the nearest of kin. Their choice fell upon Raja Takht Singh of Ahmednagar. Maharaja Takht Singh, who supported the British during the Revolt of 1857, died in 1873. His successor, Maharaja Jaswant Singh II, who died in 1896, was a very enlightened ruler. His brother, Sir Pratap Singh, conducted the administration until his nephew, Sardar Singh, came of age in 1898. Maharaja Sardar Singh ruled until 1911. The imperial service cavalry formed part of the reserve brigade during the Tirah campaign.",
+        "In 1949 Maharaja Hanwant Singh acceded to the Government of India; in 1950 Rajputana became the state of Rajasthan. While Marwar is a historical region, not a current sovereign state, the head of the former royal family and respected figure of the region is Maharaja Gaj Singh II, the 36th titular Maharaja of Jodhpur (Marwar), who leads the family and manages cultural heritage sites like Mehrangarh Fort through trusts, continuing the Rathore legacy."
+      ],
+      "traditionsTitle": "Traditions",
+      "traditionsContent": [
+        "Marwar traditions are rich in art, valor, and vibrant culture, showcasing resilience in a harsh landscape through intricate crafts (textiles, painting, jewelry) and celebrating heroic rulers via music and dance.",
+        "Despite these natural adversities, the Marwari community flourished, known for its entrepreneurial spirit, adaptability, and strong moral values. The culture is deeply intertwined with Rajasthan's royal legacy, evident in its magnificent havelis, palaces, and forts that continue to captivate visitors.",
+        "The Marwari culture is synonymous with artistic excellence. From intricately designed bandhej (tie-dye) and leheriya fabrics to the exquisite meenakari and kundan jewelry, the craftsmanship of Marwaris is unparalleled. The community has also preserved traditional folk arts like puppetry, painting, and the soulful melodies of bhajans and folk songs."
+      ],
+      "cultureTitle": "Culture",
+      "cultureContent": [
+        "Marwadi culture is rich with colorful traditions, values, and a unique language. Festivals like Teej and Gangaur, marriage rituals, and art forms such as Pichwai paintings and Bandhej textiles showcase the community's rich heritage. Values like respect for elders, family unity, and community welfare are embedded in the community's soul, which strengthens individual character and community relationships."
+      ]
+    },
     "medical": {
       "title": "Medical Help",
       "subtitle": "Help",
@@ -308,6 +348,23 @@
       "title": "General Help",
       "subtitle": "Help",
       "content": "Whether you need assistance settling in Ahmedabad, finding local services, or just connecting with fellow community members, we're here to help."
+    },
+    "generalRules": {
+      "title": "Rules And Regulations",
+      "subtitle": "Help",
+      "intro": "Please find below the general rules and regulations for members of Blue City Positive Forum. These guidelines help us maintain a harmonious and supportive community.",
+      "rulesTitle": "Rules and Regulations",
+      "rules": [
+        "In these rules, the term 'committee' refers to the group of individuals appointed by the Board of Directors of Bluecity Positive Forum to evaluate applications for any type of financial assistance.",
+        "Each applicant shall submit a valid application in the prescribed format issued under the Scheme with valid KYC documents and demand note/bills of the serving institution.",
+        "All Financial Assistance payments in connection with the applications approved shall be made by way of Demand Draft/Cheque/Pay-order in favour of the beneficiary/beneficiary's parent or legal guardian/serving institution which has raised the demand note. The sole decision of payment mode and name remains with approving committee.",
+        "All duly filled in applications and complete in all respects with valid KYC documents shall reach latest on or before the latest date specified on the application form. Applications received after the latest date i.e. are liable to be rejected.",
+        "Each application shall be recommended by any one of the following persons. The Committee may at any time increase or reduce the number of the persons to be designated as authorized persons for recommending scholarship applications.",
+        "Approval of an application shall be made by the said committee after considering number of factors like Total Income of Family, No. of persons in a family, Merits of the application and such other factors as the committee may deem fit. The Decision of the said Committee shall be final and binding on all applicants.",
+        "The Management of Bluecity Positive Forum shall have the sole and absolute discretion to determine the number of beneficiaries and to approve or reject any application for financial assistance. No claims, disputes, or legal proceedings shall be entertained in relation to such decisions.",
+        "Bluecity Positive Forum (BPF) reserves the right to terminate the Scheme at any time during its validity. In the event that the Scheme is terminated after its commencement, BPF shall duly notify all applicants whose applications have been received under the Scheme regarding such termination. BPF shall bear no liability, financial or otherwise, towards any applicant or beneficiary for any claims, losses, or damages arising out of or in connection with such termination.",
+        "The Applicant shall abide with the terms and conditions, rules and regulations of the Bluecity Positive Forum."
+      ]
     },
     "socialWork": {
       "title": "Social Work",
@@ -464,6 +521,28 @@
         {"marwadiMonth": "Kartik", "calendarMonth": "November", "date": "9th", "festival": "Govardhan Puja", "day": "Monday"},
         {"marwadiMonth": "Kartik", "calendarMonth": "November", "date": "11th", "festival": "Bhaiya Duj", "day": "Wednesday"}
       ]
+    },
+    "gallery": {
+      "subtitle": "Gallery",
+      "noImages": "No images available at the moment",
+      "socialWork": {
+        "title": "Social Work Gallery",
+        "description": "Capturing moments of service and community welfare",
+        "heading": "Our Social Work Initiatives",
+        "content": "Browse through the images showcasing our commitment to social welfare and community service. These moments capture the spirit of giving back and making a positive impact in society."
+      },
+      "community": {
+        "title": "Community Get Together",
+        "description": "Celebrating togetherness and cultural bonds",
+        "heading": "Community Celebrations",
+        "content": "Explore the vibrant moments from our community gatherings, festivals, and celebrations. These events strengthen our bonds and preserve our rich cultural heritage."
+      },
+      "press": {
+        "title": "Press Coverage",
+        "description": "Our presence in media and news",
+        "heading": "Media Highlights",
+        "content": "View our media coverage and press highlights. These articles and features showcase our activities and impact in the community."
+      }
     }
   }
 }

@@ -41,6 +41,7 @@ export const Navbar: React.FC = () => {
       dropdown: [
         { name: t('about.whoWeAre'), path: ROUTES.ABOUT_WHO_WE_ARE },
         { name: t('about.managementTeam'), path: ROUTES.ABOUT_MANAGEMENT_TEAM },
+        { name: t('about.history'), path: ROUTES.ABOUT_HISTORY },
       ],
     },
     {
@@ -49,6 +50,7 @@ export const Navbar: React.FC = () => {
         { name: t('help.medical'), path: ROUTES.HELP_MEDICAL },
         { name: t('help.education'), path: ROUTES.HELP_EDUCATION },
         { name: t('help.generalHelp'), path: ROUTES.HELP_GENERAL },
+        { name: t('help.rules'), path: ROUTES.HELP_RULES },
       ],
     },
     {
@@ -57,6 +59,14 @@ export const Navbar: React.FC = () => {
         { name: t('activities.socialWork'), path: ROUTES.ACTIVITIES_SOCIAL_WORK },
         { name: t('activities.cultural'), path: ROUTES.ACTIVITIES_CULTURAL },
         { name: t('activities.getTogether'), path: ROUTES.ACTIVITIES_GET_TOGETHER },
+      ],
+    },
+    {
+      name: t('nav.gallery'),
+      dropdown: [
+        { name: t('gallery.socialWork'), path: ROUTES.GALLERY_SOCIAL_WORK },
+        { name: t('gallery.community'), path: ROUTES.GALLERY_COMMUNITY },
+        { name: t('gallery.press'), path: ROUTES.GALLERY_PRESS },
       ],
     },
     // { name: t('nav.joinUs'), path: ROUTES.JOIN_US }, // Hidden temporarily
