@@ -203,47 +203,30 @@ export const Education: React.FC = () => {
 
             {/* Application Form Section */}
             <div className="border-t border-gray-200 pt-12">
-              <div className="mb-8 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                  {t('pages.education.applicationForm.title')}
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto mb-2">
+              <div className="text-center max-w-2xl mx-auto">
+                <div className="flex items-center justify-center mb-4">
+                  <svg className="w-8 h-8 text-blue-city-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                    {t('pages.education.applicationForm.title')}
+                  </h2>
+                </div>
+                <p className="text-gray-600 mb-4">
                   {t('pages.education.applicationForm.description')}
                 </p>
-                <p className="text-sm text-blue-city-primary font-semibold bg-blue-50 p-3 rounded-lg max-w-2xl mx-auto">
+                <p className="text-sm text-blue-city-primary font-semibold bg-blue-50 p-3 rounded-lg mb-6">
                   {t('pages.education.applicationForm.note')}
                 </p>
-              </div>
-
-              {/* Google Form Embed */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="relative w-full bg-gray-50">
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSciRk1tAUX-N3s4YwRLcwAwMMU0koV67ECzcBfkS467vbju7w/viewform?embedded=true"
-                    className="w-full h-[800px] md:h-[1200px]"
-                    frameBorder="0"
-                    marginHeight={0}
-                    marginWidth={0}
-                    title={t('pages.education.applicationForm.title')}
-                  >
-                    Loading…
-                  </iframe>
-                </div>
-              </div>
-
-              {/* Fallback message */}
-              <div className="mt-4 text-center text-sm text-gray-600">
-                <p>
-                  {t('pages.education.applicationForm.troubleViewing')}
-                  <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSciRk1tAUX-N3s4YwRLcwAwMMU0koV67ECzcBfkS467vbju7w/viewform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-city-primary hover:underline ml-1 font-semibold"
-                  >
-                    {t('pages.education.applicationForm.openInNewTab')}
-                  </a>
-                </p>
+                <button
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSciRk1tAUX-N3s4YwRLcwAwMMU0koV67ECzcBfkS467vbju7w/viewform', '_blank')}
+                  className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  {t('pages.education.applicationForm.openInNewTab')}
+                </button>
               </div>
             </div>
           </motion.div>

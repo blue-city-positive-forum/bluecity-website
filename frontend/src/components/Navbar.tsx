@@ -41,6 +41,7 @@ export const Navbar: React.FC = () => {
       dropdown: [
         { name: t('about.whoWeAre'), path: ROUTES.ABOUT_WHO_WE_ARE },
         { name: t('about.managementTeam'), path: ROUTES.ABOUT_MANAGEMENT_TEAM },
+        { name: t('about.objectives'), path: ROUTES.ABOUT_OBJECTIVES },
         { name: t('about.history'), path: ROUTES.ABOUT_HISTORY },
       ],
     },
@@ -339,7 +340,7 @@ export const Navbar: React.FC = () => {
                       : 'text-blue-city-text'
                   }`}
                 >
-                  हिंदी
+                  मारवाड़ी
                 </button>
               </div>
             </div>

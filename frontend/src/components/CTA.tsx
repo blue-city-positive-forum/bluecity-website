@@ -64,29 +64,6 @@ export const CTA: React.FC = () => {
             <br />{t('home.cta.descriptionLine2')}
           </p>
 
-          {/* Membership Details */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 max-w-4xl mx-auto mb-12 border border-white/20"
-          >
-            <div className="grid md:grid-cols-3 gap-8 text-white">
-              <div>
-                <div className="text-5xl font-bold mb-2">{t('home.cta.priceAmount')}</div>
-                <div className="text-blue-100">{t('home.cta.priceLabel')}</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold mb-2">{t('home.cta.lifetimeLabel')}</div>
-                <div className="text-blue-100">{t('home.cta.lifetimeDesc')}</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold mb-2">{t('home.cta.familyLabel')}</div>
-                <div className="text-blue-100">{t('home.cta.familyDesc')}</div>
-              </div>
-            </div>
-          </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,8 +96,8 @@ export const CTA: React.FC = () => {
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-3">📧</div>
               <div className="font-semibold mb-1">{t('home.cta.emailLabel')}</div>
-              <a href="mailto:info@bluecityparivar.com" className="text-blue-100 hover:text-white transition-colors">
-                info@bluecityparivar.com
+              <a href="mailto:bluecityahmedabad@gmail.com" className="text-blue-100 hover:text-white transition-colors">
+                bluecityahmedabad@gmail.com
               </a>
             </div>
             <div className="flex flex-col items-center">

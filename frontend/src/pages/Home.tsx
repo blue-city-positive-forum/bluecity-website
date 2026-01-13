@@ -12,8 +12,8 @@ export const Home: React.FC = () => {
     <Layout>
       <Hero />
       <About />
-      <Events />
-      <Gallery />
+      {/* <Events /> */}
+      {/* <Gallery /> */}
       <Stories />
       <CTA />
     </Layout>

@@ -69,20 +69,24 @@ export const OurHistory: React.FC = () => {
               </div>
             </div>
 
-            {/* Featured Hero Image Placeholder */}
+            {/* Featured Hero Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-slate-100 aspect-[21/9] flex items-center justify-center group"
+              className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[21/9] group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-city-primary/10 to-blue-city-accent/10"></div>
-              <div className="relative z-10 text-center space-y-4">
-                <ImageIcon className="w-16 h-16 mx-auto text-blue-city-primary/40" />
-                <p className="text-gray-600 font-medium">Mehrangarh Fort / Jodhpur Cityscape</p>
-                <p className="text-sm text-gray-500 max-w-md mx-auto px-4">
-                  {t('pages.ourHistory.imagePlaceholder')}
-                </p>
+              <img
+                src="/bluecity-jodhpur/marwar_history/mehrangarh-fort.jpg"
+                alt="Mehrangarh Fort - The magnificent fort of Jodhpur"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-6 left-6 text-white">
+                  <p className="text-2xl font-bold">{t('pages.ourHistory.images.mehrangarhFort')}</p>
+                  <p className="text-sm text-gray-200">{t('pages.ourHistory.images.prideOfMarwar')}</p>
+                </div>
               </div>
             </motion.div>
 
@@ -102,16 +106,19 @@ export const OurHistory: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Side Image Placeholder */}
+                {/* Side Historical Image */}
                 <div className="lg:col-span-1">
                   <div className="sticky top-24">
-                    <div className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-orange-50 aspect-[3/4] flex items-center justify-center">
-                      <div className="text-center space-y-3 p-6">
-                        <ImageIcon className="w-12 h-12 mx-auto text-amber-600/40" />
-                        <p className="text-sm text-gray-600 font-medium">Historical Image</p>
-                        <p className="text-xs text-gray-500">Rao Jodha / Mehrangarh</p>
-                      </div>
+                    <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
+                      <img
+                        src="/bluecity-jodhpur/marwar_history/rao_jodha.jpg"
+                        alt="Rao Jodha - Founder of Jodhpur"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
+                    <p className="text-center text-sm text-gray-600 mt-3 font-medium">{t('pages.ourHistory.images.raoJodha')}</p>
+                    <p className="text-center text-xs text-gray-500">{t('pages.ourHistory.images.founderOfJodhpur')}</p>
                   </div>
                 </div>
               </div>
@@ -126,20 +133,40 @@ export const OurHistory: React.FC = () => {
               {/* Historical Images Grid */}
               <div className="grid md:grid-cols-3 gap-6 mt-10">
                 {[
-                  { label: 'Mehrangarh Fort', color: 'from-red-50 to-orange-50', iconColor: 'text-red-600/40' },
-                  { label: 'Royal Palace', color: 'from-amber-50 to-yellow-50', iconColor: 'text-amber-600/40' },
-                  { label: 'Blue City View', color: 'from-blue-50 to-cyan-50', iconColor: 'text-blue-600/40' }
+                  { 
+                    image: 'jaswant_thada.jpeg', 
+                    labelKey: 'jaswantThada', 
+                    descriptionKey: 'royalCenotaph'
+                  },
+                  { 
+                    image: 'umeb_palace.jpeg', 
+                    labelKey: 'umaidPalace', 
+                    descriptionKey: 'lastGreatPalace'
+                  },
+                  { 
+                    image: 'jodhpur_ghantaghar.jpeg', 
+                    labelKey: 'ghantaGhar', 
+                    descriptionKey: 'clockTower'
+                  }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
-                    className={`rounded-xl overflow-hidden shadow-md bg-gradient-to-br ${item.color} aspect-[4/3] flex items-center justify-center`}
+                    className="rounded-xl overflow-hidden shadow-md aspect-[4/3] group relative"
                   >
-                    <div className="text-center space-y-2 p-4">
-                      <ImageIcon className={`w-10 h-10 mx-auto ${item.iconColor}`} />
-                      <p className="text-sm text-gray-600 font-medium">{item.label}</p>
+                    <img
+                      src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                      alt={t(`pages.ourHistory.images.${item.labelKey}`)}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-4">
+                      <div className="text-white">
+                        <p className="font-semibold">{t(`pages.ourHistory.images.${item.labelKey}`)}</p>
+                        <p className="text-xs text-gray-200">{t(`pages.ourHistory.images.${item.descriptionKey}`)}</p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -155,15 +182,18 @@ export const OurHistory: React.FC = () => {
 
               {/* Traditions Content with Side Image */}
               <div className="grid lg:grid-cols-5 gap-8">
-                {/* Image Placeholder - Left Side */}
+                {/* Traditional Art Image - Left Side */}
                 <div className="lg:col-span-2 order-2 lg:order-1">
-                  <div className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-50 to-pink-50 aspect-[3/4] flex items-center justify-center">
-                    <div className="text-center space-y-3 p-6">
-                      <ImageIcon className="w-12 h-12 mx-auto text-purple-600/40" />
-                      <p className="text-sm text-gray-600 font-medium">Traditional Art</p>
-                      <p className="text-xs text-gray-500">Bandhej / Jewelry / Crafts</p>
-                    </div>
+                  <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
+                    <img
+                      src="/bluecity-jodhpur/marwar_history/jodhpur_shop_art.jpeg"
+                      alt="Traditional Marwari crafts and art"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
+                  <p className="text-center text-sm text-gray-600 mt-3 font-medium">{t('pages.ourHistory.images.traditionalCrafts')}</p>
+                  <p className="text-center text-xs text-gray-500">{t('pages.ourHistory.images.bandhejJewelryArt')}</p>
                 </div>
 
                 {/* Content */}
@@ -177,21 +207,26 @@ export const OurHistory: React.FC = () => {
               {/* Traditions Image Gallery */}
               <div className="grid md:grid-cols-4 gap-4 mt-10">
                 {[
-                  { label: 'Bandhej Textiles', color: 'from-pink-50 to-rose-50', iconColor: 'text-pink-600/40' },
-                  { label: 'Meenakari Jewelry', color: 'from-yellow-50 to-amber-50', iconColor: 'text-yellow-600/40' },
-                  { label: 'Folk Dance', color: 'from-green-50 to-emerald-50', iconColor: 'text-green-600/40' },
-                  { label: 'Puppetry Art', color: 'from-violet-50 to-purple-50', iconColor: 'text-violet-600/40' }
+                  { image: 'bandhej.jpeg', labelKey: 'bandhejTextiles' },
+                  { image: 'ghoomar.jpg', labelKey: 'ghoomarDance' },
+                  { image: 'puppets.jpeg', labelKey: 'puppetryArt' },
+                  { image: 'jodhpur_shop_art.jpeg', labelKey: 'traditionalCrafts' }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 + index * 0.1 }}
-                    className={`rounded-lg overflow-hidden shadow-md bg-gradient-to-br ${item.color} aspect-square flex items-center justify-center`}
+                    className="rounded-lg overflow-hidden shadow-md aspect-square group relative"
                   >
-                    <div className="text-center space-y-2 p-3">
-                      <ImageIcon className={`w-8 h-8 mx-auto ${item.iconColor}`} />
-                      <p className="text-xs text-gray-600 font-medium">{item.label}</p>
+                    <img
+                      src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                      alt={t(`pages.ourHistory.images.${item.labelKey}`)}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                      <p className="text-xs text-white font-medium">{t(`pages.ourHistory.images.${item.labelKey}`)}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -216,19 +251,27 @@ export const OurHistory: React.FC = () => {
                 {/* Culture Images */}
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
-                    { label: 'Teej & Gangaur Festival', color: 'from-rose-50 to-pink-50', iconColor: 'text-rose-600/40' },
-                    { label: 'Traditional Wedding', color: 'from-orange-50 to-red-50', iconColor: 'text-orange-600/40' }
+                    { image: 'teej_celebration.jpeg', labelKey: 'teejFestival', descriptionKey: 'teejDescription' },
+                    { image: 'gangaur_festival.jpg', labelKey: 'gangaurFestival', descriptionKey: 'gangaurDescription' }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8 + index * 0.1 }}
-                      className={`rounded-xl overflow-hidden shadow-lg bg-gradient-to-br ${item.color} aspect-[16/9] flex items-center justify-center`}
+                      className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group relative"
                     >
-                      <div className="text-center space-y-3 p-6">
-                        <ImageIcon className={`w-12 h-12 mx-auto ${item.iconColor}`} />
-                        <p className="text-sm text-gray-600 font-medium">{item.label}</p>
+                      <img
+                        src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                        alt={t(`pages.ourHistory.images.${item.labelKey}`)}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6">
+                        <div className="text-white">
+                          <p className="font-semibold text-lg">{t(`pages.ourHistory.images.${item.labelKey}`)}</p>
+                          <p className="text-sm text-gray-200">{t(`pages.ourHistory.images.${item.descriptionKey}`)}</p>
+                        </div>
                       </div>
                     </motion.div>
                   ))}

@@ -4,53 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/layout/Layout';
 import { 
   Eye, 
-  Target, 
-  GraduationCap, 
-  Heart, 
-  Briefcase, 
-  Leaf, 
-  Palette, 
-  Users 
+  Target
 } from 'lucide-react';
 
 export const WhoWeAre: React.FC = () => {
   const { t } = useTranslation();
-  
-  const objectives = t('pages.objectives.list', { returnObjects: true }) as Array<{
-    title: string;
-    description: string;
-  }>;
-
-  const objectiveIcons = [
-    GraduationCap,
-    Heart,
-    Briefcase,
-    Leaf,
-    Palette,
-    Users,
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
   
   return (
     <Layout>
@@ -124,46 +82,6 @@ export const WhoWeAre: React.FC = () => {
               <p className="text-lg text-gray-700 leading-relaxed">
                 {t('pages.mission.statement')}
               </p>
-            </div>
-
-            {/* Objectives */}
-            <div className="border-t border-gray-200 pt-12">
-              <div className="mb-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  {t('pages.objectives.title')}
-                </h2>
-              </div>
-
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              >
-                {objectives.map((objective, index) => {
-                  const Icon = objectiveIcons[index];
-                  
-                  return (
-                    <motion.div
-                      key={index}
-                      variants={cardVariants}
-                      className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
-                    >
-                      <div className="flex items-center justify-center w-12 h-12 bg-blue-50 rounded-lg mb-4">
-                        <Icon className="w-6 h-6 text-blue-city-primary" />
-                      </div>
-
-                      <h3 className="text-lg font-bold text-gray-900 mb-3">
-                        {objective.title}
-                      </h3>
-
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {objective.description}
-                      </p>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -57,10 +57,10 @@ export const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-6"
           >
             <button
-              onClick={() => navigate(ROUTES.CONTACT)}
+              onClick={() => navigate(ROUTES.ABOUT_HISTORY)}
               className="px-6 py-3 text-base sm:text-base font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              {t('home.joinParivar')}
+              {t('home.marwarHistory')}
             </button>
             <button
               onClick={() => navigate(ROUTES.FESTIVALS)}

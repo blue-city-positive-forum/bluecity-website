@@ -20,7 +20,7 @@
     "vision": "Vision",
     "mission": "Mission",
     "objectives": "Objectives",
-    "history": "Our History"
+    "history": "Marwar's History"
   },
   "help": {
     "medical": "Medical Help",
@@ -67,6 +67,7 @@
     "heroTitle": "Where Heart of Marwar Meets Soul of Ahmedabad",
     "heroDescription": "A spirited Marwari community thriving in the heart of Gujarat, nurturing our heritage through social upliftment, preservation of cultural values, festive traditions, and enduring bonds.",
     "joinParivar": "Join the Parivar",
+    "marwarHistory": "Marwar's History",
     "exploreEvents": "Explore Events",
     "ourFestivals": "Our Festivals",
     "membersCount": "Members",
@@ -79,8 +80,8 @@
       "paragraph1": "is more than just a community—it's a family that brings together the vibrant Marwari spirit to the heart of Ahmedabad.",
       "paragraph2": "We are a close-knit group of Marwari families who have made Ahmedabad our home, yet we cherish our roots, culture, and traditions. Through regular gatherings, festivals, and celebrations, we create a space where our heritage thrives.",
       "paragraph3": "Whether it's celebrating Diwali, Holi, or organizing cultural events, we come together to support each other, share our stories, and pass on our rich traditions to the next generation.",
-      "feature1Title": "Regular Events",
-      "feature1Desc": "Monthly gatherings & festivals",
+      "feature1Title": "Social Upliftment",
+      "feature1Desc": "Empowering our community",
       "feature2Title": "Family Oriented",
       "feature2Desc": "All ages welcome",
       "feature3Title": "Cultural Heritage",
@@ -200,7 +201,10 @@
     "location": "Location",
     "locationText": "Ahmedabad, Gujarat\nIndia",
     "whatsapp": "WhatsApp",
-    "whatsappText": "Chat with us on WhatsApp"
+    "whatsappText": "Chat with us on WhatsApp",
+    "membershipForm": "Membership Form",
+    "membershipFormDesc": "Interested in becoming a member? Fill out our membership form to start your journey with us.",
+    "fillMembershipForm": "Fill Membership Form"
   },
   "matrimony": {
     "title": "Matrimony",
@@ -308,7 +312,7 @@
       ]
     },
     "ourHistory": {
-      "title": "Our History",
+      "title": "Marwar's History",
       "subtitle": "About",
       "imagePlaceholder": "Image placeholder - Add your Marwar heritage photos here",
       "poem": {
@@ -337,7 +341,28 @@
       "cultureTitle": "Culture",
       "cultureContent": [
         "Marwadi culture is rich with colorful traditions, values, and a unique language. Festivals like Teej and Gangaur, marriage rituals, and art forms such as Pichwai paintings and Bandhej textiles showcase the community's rich heritage. Values like respect for elders, family unity, and community welfare are embedded in the community's soul, which strengthens individual character and community relationships."
-      ]
+      ],
+      "images": {
+        "mehrangarhFort": "Mehrangarh Fort",
+        "prideOfMarwar": "The Pride of Marwar",
+        "raoJodha": "Rao Jodha",
+        "founderOfJodhpur": "Founder of Jodhpur (1459)",
+        "jaswantThada": "Jaswant Thada",
+        "royalCenotaph": "Royal Cenotaph",
+        "umaidPalace": "Umaid Bhawan Palace",
+        "lastGreatPalace": "Last Great Palace",
+        "ghantaGhar": "Ghanta Ghar",
+        "clockTower": "Clock Tower",
+        "traditionalCrafts": "Traditional Crafts",
+        "bandhejJewelryArt": "Bandhej, Jewelry & Art",
+        "bandhejTextiles": "Bandhej Textiles",
+        "ghoomarDance": "Ghoomar Dance",
+        "puppetryArt": "Puppetry Art",
+        "teejFestival": "Teej Festival",
+        "teejDescription": "Celebrating monsoon and marital bliss",
+        "gangaurFestival": "Gangaur Festival",
+        "gangaurDescription": "Honoring Goddess Gauri"
+      }
     },
     "medical": {
       "title": "Medical Help",
@@ -456,7 +481,7 @@
         "description": "Please fill out the application form below with accurate information. Our committee will review your application and contact you regarding the next steps.",
         "note": "Note: Only students with above 50% marks in the last academic year are eligible to apply.",
         "troubleViewing": "Having trouble viewing the form?",
-        "openInNewTab": "Open in new tab"
+        "openInNewTab": "Fill Scholarship Form"
       }
     },
     "matrimonyHome": {
@@ -467,7 +492,7 @@
       "formDescription": "Please fill out the form below with accurate information about yourself or your family member who is looking for a life partner. Our team will review your submission and get in touch with you.",
       "formNote": "All information provided will be kept confidential and shared only with interested families within our community.",
       "troubleViewing": "Having trouble viewing the form?",
-      "openInNewTab": "Open in new tab"
+      "openInNewTab": "Fill Matrimony Form"
     },
     "festivals": {
       "title": "Our Festivals",
