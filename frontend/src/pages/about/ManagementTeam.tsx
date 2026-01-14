@@ -20,6 +20,7 @@ export const ManagementTeam: React.FC = () => {
     name: string;
     role: string;
     description: string;
+    image?: string;
   }>;
 
   // Icon mapping based on roles
@@ -132,7 +133,15 @@ export const ManagementTeam: React.FC = () => {
                       {/* Photo */}
                       <div className="mb-5">
                         <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-                          {/* <Icon className="w-14 h-14 text-gray-400" /> */}
+                          {member.image ? (
+                            <img 
+                              src={member.image} 
+                              alt={member.name}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <Icon className="w-14 h-14 text-gray-400" />
+                          )}
                         </div>
                       </div>
 
@@ -176,7 +185,15 @@ export const ManagementTeam: React.FC = () => {
                         {/* Photo */}
                         <div className="mb-5">
                           <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-                            <Icon className="w-14 h-14 text-gray-400" />
+                            {member.image ? (
+                              <img 
+                                src={member.image} 
+                                alt={member.name}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <Icon className="w-14 h-14 text-gray-400" />
+                            )}
                           </div>
                         </div>
 

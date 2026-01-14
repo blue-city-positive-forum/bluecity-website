@@ -101,7 +101,7 @@ export const Gallery: React.FC = () => {
                 onClick={() => openLightbox(photo, index)}
               >
                 <img
-                  src={photo.url}
+                  src={photo.imageUrl}
                   alt={photo.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
@@ -146,7 +146,7 @@ export const Gallery: React.FC = () => {
             {/* Image */}
             <div className="relative">
               <img
-                src={selectedPhoto.url}
+                src={selectedPhoto.imageUrl}
                 alt={selectedPhoto.title}
                 className="w-full h-auto max-h-[80vh] object-contain bg-black"
               />

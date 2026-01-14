@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
       <Hero />
       <About />
       {/* <Events /> */}
-      {/* <Gallery /> */}
+      <Gallery />
       <Stories />
       <CTA />
     </Layout>

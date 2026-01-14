@@ -131,7 +131,6 @@
     "cta": {
       "title": "Become Part of Our Family",
       "description": "Join Blue City Positive Forum today and experience the warmth of Marwari culture in Ahmedabad.",
-      "descriptionLine2": "Lifetime membership for your entire family.",
       "priceAmount": "₹7,000",
       "priceLabel": "One-time Payment",
       "lifetimeLabel": "Lifetime",
@@ -150,7 +149,7 @@
     "title": "Blue City Positive Forum",
     "description": "Connecting Marwaris in Ahmedabad. A community dedicated to preserving our heritage, celebrating our culture, and supporting each other.",
     "registeredOrg": "A registered community organization",
-    "servingSince": "Serving the Marwari community in Ahmedabad since 2015",
+    "servingSince": "Serving the Marwari community",
     "quickLinks": "Quick Links",
     "aboutUs": "About Us",
     "managementTeam": "Management Team",
@@ -232,7 +231,8 @@
         {
           "name": "Mr. M M Singhi",
           "role": "Advocate",
-          "description": "A prominent advocate and head of the nationally recognized law firm Singhi & Co."
+          "description": "A prominent advocate and head of the nationally recognized law firm Singhi & Co.",
+          "image": "/bluecity-jodhpur/management_team/m_m_singhi.jpeg"
         },
         {
           "name": "Mrs. Shelly Mayank Bapna",
@@ -242,7 +242,8 @@
         {
           "name": "Mr. Deepak Jain",
           "role": "Industrialist",
-          "description": "An established industrialist who owns a garment manufacturing unit and serves on the board of the Gujarat Garment Manufacturing Association."
+          "description": "An established industrialist who owns a garment manufacturing unit and serves on the board of the Gujarat Garment Manufacturing Association.",
+          "image": "/bluecity-jodhpur/management_team/deepak_jain.jpeg"
         },
         {
           "name": "CA Rajendra Agarwal",
@@ -252,7 +253,8 @@
         {
           "name": "CA V. K. Mundra",
           "role": "Chartered Accountant",
-          "description": "A veteran professional with 40 years of practice in Ahmedabad, a well-known figure in the Marwari and Maheshwari communities, recognized for both his professional excellence and his charitable nature."
+          "description": "A veteran professional with 40 years of practice in Ahmedabad, a well-known figure in the Marwari and Maheshwari communities, recognized for both his professional excellence and his charitable nature.",
+          "image": "/bluecity-jodhpur/management_team/v_k_mundra.jpeg"
         },
         {
           "name": "Shri Dinesh Goliya",
@@ -262,7 +264,8 @@
         {
           "name": "Advocate Shri Gaurav Soni",
           "role": "IPR Specialist",
-          "description": "The founder and proprietor of the law firm Soni & Soni, specializing in Intellectual Property Rights (IPR). He is widely regarded as an expert in the field."
+          "description": "The founder and proprietor of the law firm Soni & Soni, specializing in Intellectual Property Rights (IPR). He is widely regarded as an expert in the field.",
+          "image": "/bluecity-jodhpur/management_team/gaurav_soni.jpeg"
         },
         {
           "name": "Shri Manish Jain",

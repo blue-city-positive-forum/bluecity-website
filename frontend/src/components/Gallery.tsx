@@ -32,36 +32,39 @@ const useInView = () => {
   return { ref, isInView };
 };
 
+// Static gallery images from public folder
 const galleryImages = [
   {
-    url: 'https://picsum.photos/800/600?random=1',
-    title: 'Diwali 2024',
-    span: 'col-span-2 h-[400px]',
+    url: `${import.meta.env.BASE_URL}community_gettogether_images/media/image1.jpeg`,
+    title: 'Community Get Together',
   },
   {
-    url: 'https://picsum.photos/400/400?random=2',
-    title: 'Holi Celebration',
-    span: 'col-span-1 h-[250px]',
+    url: `${import.meta.env.BASE_URL}community_gettogether_images/media/image2.jpeg`,
+    title: 'Community Event',
   },
   {
-    url: 'https://picsum.photos/400/400?random=3',
-    title: 'Folk Dance',
-    span: 'col-span-1 h-[250px]',
+    url: `${import.meta.env.BASE_URL}social_work_images/media/image1.jpeg`,
+    title: 'Social Work Initiative',
   },
   {
-    url: 'https://picsum.photos/400/500?random=4',
-    title: 'Color Festival',
-    span: 'col-span-1 h-[300px]',
+    url: `${import.meta.env.BASE_URL}community_gettogether_images/media/image3.jpeg`,
+    title: 'Cultural Celebration',
   },
   {
-    url: 'https://picsum.photos/400/500?random=5',
-    title: 'Cultural Evening',
-    span: 'col-span-1 h-[300px]',
+    url: `${import.meta.env.BASE_URL}social_work_images/media/image3.jpeg`,
+    title: 'Community Service',
   },
   {
-    url: 'https://picsum.photos/800/400?random=6',
-    title: 'Community Gathering',
-    span: 'col-span-2 h-[250px]',
+    url: `${import.meta.env.BASE_URL}community_gettogether_images/media/image4.jpeg`,
+    title: 'Festive Gathering',
+  },
+  {
+    url: `${import.meta.env.BASE_URL}social_work_images/media/image5.jpeg`,
+    title: 'Social Initiative',
+  },
+  {
+    url: `${import.meta.env.BASE_URL}community_gettogether_images/media/image5.jpeg`,
+    title: 'Community Celebration',
   },
 ];
 
@@ -99,7 +102,7 @@ export const Gallery: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
           {galleryImages.map((image, idx) => (
             <motion.div
@@ -107,7 +110,8 @@ export const Gallery: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-              className={`${image.span} relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer`}
+              onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+              className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square"
             >
               <img
                 src={image.url}
@@ -116,8 +120,8 @@ export const Gallery: React.FC = () => {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4 text-white">
-                  <h4 className="font-semibold text-lg">{image.title}</h4>
+                <div className="p-3 md:p-4 text-white">
+                  <h4 className="font-semibold text-xs md:text-sm line-clamp-2">{image.title}</h4>
                 </div>
               </div>
             </motion.div>
@@ -132,10 +136,18 @@ export const Gallery: React.FC = () => {
           className="text-center mt-12"
         >
           <button 
-            onClick={() => navigate(ROUTES.GALLERY)}
-            className="text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors cursor-pointer"
+            onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+            className="inline-flex items-center gap-2 text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors cursor-pointer group"
           >
-            {t('home.gallery.viewFullGallery')} →
+            {t('home.gallery.viewFullGallery')}
+            <svg 
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </button>
         </motion.div>
       </div>
