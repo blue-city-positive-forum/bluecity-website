@@ -39,12 +39,8 @@ export const About: React.FC = () => {
     <section
       id="about"
       ref={ref}
-      className="py-20 md:py-32 bg-white relative overflow-hidden"
+      className="py-20 md:py-32 relative"
     >
-      {/* Decorative Background Element */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-city-secondary/30 rounded-full blur-3xl -z-0"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-city-accent/20 rounded-full blur-3xl -z-0"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

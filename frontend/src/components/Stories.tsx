@@ -60,11 +60,8 @@ export const Stories: React.FC = () => {
     <section
       id="stories"
       ref={ref}
-      className="py-20 md:py-32 bg-gradient-to-br from-blue-city-background via-blue-city-secondary/20 to-blue-city-secondary/80 relative overflow-hidden"
+      className="py-20 md:py-32 relative"
     >
-      {/* Decorative Pattern Background */}
-      <div className="absolute inset-0 bg-pattern opacity-90"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div

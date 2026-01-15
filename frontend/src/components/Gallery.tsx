@@ -74,10 +74,7 @@ export const Gallery: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="gallery" ref={ref} className="py-20 md:py-32 bg-white relative overflow-hidden">
-      {/* Decorative Background */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-city-primary/15 rounded-full blur-3xl -z-0"></div>
-
+    <section id="gallery" ref={ref} className="py-20 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
