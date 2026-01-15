@@ -10,18 +10,36 @@ export const About: React.FC = () => {
   return (
     <Layout>
       <div className="max-w-6xl mx-auto py-12 px-4">
+        {/* Hero Image - Mobile Optimized */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl mb-8 md:mb-12 aspect-video md:aspect-[21/9]"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}about.jpeg`}
+            alt="Blue City Positive Forum Community"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+            <div className="p-4 md:p-8 lg:p-12 text-white">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-3">
+                About <span className="text-blue-300">Blue City Positive Forum</span>
+              </h1>
+              <p className="text-sm md:text-lg lg:text-xl text-blue-100">
+                Connecting the hearts of Jodhpur in Ahmedabad since 2015
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold text-blue-city-text mb-4">
-            About <span className="text-gradient">Blue City Positive Forum</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Connecting the hearts of Jodhpur in Ahmedabad since 2015
-          </p>
         </motion.div>
 
         {/* Story Section */}

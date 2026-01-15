@@ -63,7 +63,7 @@ export const About: React.FC = () => {
               <img
                 src={aboutImg}
                 alt="Rajasthani Culture"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[200px] md:h-[400px] lg:h-[500px] object-cover"
               />
               {/* Decorative Border */}
               <div className="absolute inset-0 border-8 border-blue-city-primary/20 rounded-2xl"></div>

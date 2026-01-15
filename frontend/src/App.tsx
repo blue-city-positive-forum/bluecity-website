@@ -1,23 +1,17 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AlertContainer } from './components/ui/Alert';
 import { Spinner } from './components/ui/Spinner';
-import { ProtectedRoute } from './components/common/ProtectedRoute';
 import { LanguageProvider } from './components/LanguageProvider';
+import { ScrollToTop } from './components/common/ScrollToTop';
 import { ROUTES } from './utils/constants';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })));
-const Events = lazy(() => import('./pages/Events').then((m) => ({ default: m.Events })));
 const Festivals = lazy(() => import('./pages/Festivals').then((m) => ({ default: m.Festivals })));
 const Gallery = lazy(() => import('./pages/Gallery').then((m) => ({ default: m.Gallery })));
-const Login = lazy(() => import('./pages/Login').then((m) => ({ default: m.Login })));
-const LoginSuccess = lazy(() => import('./pages/LoginSuccess').then((m) => ({ default: m.LoginSuccess })));
-const LoginFail = lazy(() => import('./pages/LoginFail').then((m) => ({ default: m.LoginFail })));
-const ResetPassword = lazy(() => import('./pages/ResetPassword').then((m) => ({ default: m.ResetPassword })));
-const Account = lazy(() => import('./pages/Account').then((m) => ({ default: m.Account })));
 const JoinUs = lazy(() => import('./pages/JoinUs').then((m) => ({ default: m.JoinUs })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
@@ -47,15 +41,6 @@ const PressCoverage = lazy(() => import('./pages/gallery/PressCoverage').then((m
 
 // Matrimony pages
 const MatrimonyHome = lazy(() => import('./pages/matrimony/MatrimonyHome').then((m) => ({ default: m.MatrimonyHome })));
-const MatrimonyList = lazy(() => import('./pages/matrimony/MatrimonyList').then((m) => ({ default: m.MatrimonyList })));
-const MatrimonyCreate = lazy(() => import('./pages/matrimony/MatrimonyCreate').then((m) => ({ default: m.MatrimonyCreate })));
-const MatrimonyEdit = lazy(() => import('./pages/matrimony/MatrimonyEdit').then((m) => ({ default: m.MatrimonyEdit })));
-const MatrimonyProfile = lazy(() => import('./pages/matrimony/MatrimonyProfile').then((m) => ({ default: m.MatrimonyProfile })));
-
-// Admin pages
-const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard').then((m) => ({ default: m.AdminDashboard })));
-const UserManagement = lazy(() => import('./pages/admin/UserManagement').then((m) => ({ default: m.UserManagement })));
-const MatrimonyManagement = lazy(() => import('./pages/admin/MatrimonyManagement').then((m) => ({ default: m.MatrimonyManagement })));
 
 // Loading component
 const PageLoader = () => (
@@ -67,6 +52,7 @@ const PageLoader = () => (
 function App() {
   return (
     <BrowserRouter basename="/bluecity-jodhpur">
+      <ScrollToTop />
       <LanguageProvider>
         <AlertContainer />
         <Suspense fallback={<PageLoader />}>
@@ -75,7 +61,6 @@ function App() {
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />
-          <Route path={ROUTES.EVENTS} element={<Events />} />
           <Route path={ROUTES.FESTIVALS} element={<Festivals />} />
           <Route path={ROUTES.GALLERY} element={<Gallery />} />
 
@@ -103,92 +88,11 @@ function App() {
           <Route path={ROUTES.GALLERY_COMMUNITY} element={<CommunityGallery />} />
           <Route path={ROUTES.GALLERY_PRESS} element={<PressCoverage />} />
 
-          {/* Auth Routes */}
-          <Route path={ROUTES.LOGIN} element={<Login />} />
-          <Route path={ROUTES.LOGIN_SUCCESS} element={<LoginSuccess />} />
-          <Route path={ROUTES.LOGIN_FAIL} element={<LoginFail />} />
-          <Route path={ROUTES.RESET_PASSWORD} element={<ResetPassword />} />
+          {/* Membership - Public */}
+          <Route path={ROUTES.JOIN_US} element={<JoinUs />} />
 
-          {/* Protected - Authenticated */}
-          <Route
-            path={ROUTES.ACCOUNT}
-            element={
-              <ProtectedRoute requireAuth>
-                <Account />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Protected - Authenticated + Approved */}
-          <Route
-            path={ROUTES.JOIN_US}
-            element={
-              <ProtectedRoute requireAuth requireApproval>
-                <JoinUs />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Matrimony Routes - Protected */}
+          {/* Matrimony Routes */}
           <Route path={ROUTES.MATRIMONY} element={<MatrimonyHome />} />
-          <Route
-            path={ROUTES.MATRIMONY_LIST}
-            element={
-              <ProtectedRoute requireAuth requireApproval>
-                <MatrimonyList />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path={ROUTES.MATRIMONY_CREATE}
-            element={
-              <ProtectedRoute requireAuth requireApproval>
-                <MatrimonyCreate />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/matrimony/edit/:id"
-            element={
-              <ProtectedRoute requireAuth requireApproval>
-                <MatrimonyEdit />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/matrimony/profile/:id"
-            element={
-              <ProtectedRoute requireAuth requireApproval>
-                <MatrimonyProfile />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Admin Routes - Protected */}
-          <Route
-            path={ROUTES.ADMIN}
-            element={
-              <ProtectedRoute requireAuth requireAdmin>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/admin/users"
-            element={
-              <ProtectedRoute requireAuth requireAdmin>
-                <UserManagement />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/admin/matrimonies"
-            element={
-              <ProtectedRoute requireAuth requireAdmin>
-                <MatrimonyManagement />
-              </ProtectedRoute>
-            }
-          />
 
           {/* 404 - Must be last */}
           <Route path="*" element={<NotFound />} />

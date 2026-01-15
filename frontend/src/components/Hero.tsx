@@ -32,6 +32,14 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="space-y-4 sm:space-y-6 md:space-y-8"
         >
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-base sm:text-lg md:text-xl font-semibold text-blue-100 tracking-wide px-4"
+          >
+            {t('home.organizationName')}
+          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

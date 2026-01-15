@@ -33,11 +33,23 @@ export const Vision: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-lg shadow-sm p-10 md:p-16"
+            className="space-y-10"
           >
-            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center">
-              {t('pages.vision.statement')}
-            </p>
+            {/* Vision Statement */}
+            <div className="bg-white rounded-lg shadow-sm p-10 md:p-16">
+              <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center">
+                {t('pages.vision.statement')}
+              </p>
+            </div>
+
+            {/* Featured Image - Hidden on mobile for better performance */}
+            <div className="rounded-xl overflow-hidden shadow-lg aspect-[21/9] hidden md:block">
+              <img
+                src={`${import.meta.env.BASE_URL}jodhpur_fort.jpeg`}
+                alt="Our Vision - Looking Forward"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

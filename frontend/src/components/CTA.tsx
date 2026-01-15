@@ -70,18 +70,11 @@ export const CTA: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            {/* Join Us button hidden temporarily */}
-            {/* <button
+            <button
               onClick={() => navigate(ROUTES.JOIN_US)}
               className="px-10 py-4 text-lg font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               {t('home.cta.becomeMember')}
-            </button> */}
-            <button
-              onClick={() => navigate(ROUTES.CONTACT)}
-              className="px-10 py-4 text-lg font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
-            >
-              {t('home.cta.contactUs')}
             </button>
           </motion.div>
 

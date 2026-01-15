@@ -42,7 +42,6 @@ export const Navbar: React.FC = () => {
         { name: t('about.whoWeAre'), path: ROUTES.ABOUT_WHO_WE_ARE },
         { name: t('about.managementTeam'), path: ROUTES.ABOUT_MANAGEMENT_TEAM },
         { name: t('about.objectives'), path: ROUTES.ABOUT_OBJECTIVES },
-        { name: t('about.history'), path: ROUTES.ABOUT_HISTORY },
       ],
     },
     {
@@ -72,6 +71,7 @@ export const Navbar: React.FC = () => {
     },
     // { name: t('nav.joinUs'), path: ROUTES.JOIN_US }, // Hidden temporarily
     { name: t('nav.matrimony'), path: ROUTES.MATRIMONY },
+    { name: t('nav.membership'), path: ROUTES.JOIN_US },
     { name: t('nav.contact'), path: ROUTES.CONTACT },
   ];
 
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-soft">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
@@ -94,18 +94,18 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <Link to={ROUTES.HOME} className="flex items-center gap-3">
+            <Link to={ROUTES.HOME} className="flex items-center gap-2">
               <img 
                 src={`${import.meta.env.BASE_URL}bluecity_logo_nobg.png`}
                 alt="Blue City Positive Forum Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-10 w-10 object-contain"
               />
-              <h1 className="text-base sm:text-lg md:text-xl font-bold text-gradient whitespace-nowrap">Blue City Positive Forum</h1>
+              <h1 className="text-sm sm:text-base md:text-lg font-bold text-gradient whitespace-nowrap">Blue City Positive Forum</h1>
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -115,10 +115,10 @@ export const Navbar: React.FC = () => {
               >
                 {item.dropdown ? (
                   <>
-                    <button className="text-blue-city-text hover:text-blue-city-primary transition-colors duration-300 font-medium flex items-center gap-1 py-2">
+                    <button className="text-sm text-blue-city-text hover:text-blue-city-primary transition-colors duration-300 font-medium flex items-center gap-0.5 py-2 px-0">
                       {item.name}
                       <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
                           openDropdown === item.name ? 'rotate-180' : ''
                         }`}
                         fill="none"
@@ -160,7 +160,7 @@ export const Navbar: React.FC = () => {
                 ) : (
                   <Link
                     to={item.path!}
-                    className="text-blue-city-text hover:text-blue-city-primary transition-colors duration-300 font-medium"
+                    className="text-sm text-blue-city-text hover:text-blue-city-primary transition-colors duration-300 font-medium px-0"
                   >
                     {item.name}
                   </Link>
@@ -169,10 +169,10 @@ export const Navbar: React.FC = () => {
             ))}
 
             {/* Language Toggle */}
-            <div className="relative inline-flex items-center p-1 bg-blue-city-secondary/20 rounded-full">
+            <div className="relative inline-flex items-center p-0.5 bg-blue-city-secondary/20 rounded-full">
               <button
                 onClick={() => currentLanguage !== 'en' && toggleLanguage()}
-                className={`px-3 py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                className={`px-2 py-0.5 text-xs font-semibold rounded-full transition-all duration-300 ${
                   currentLanguage === 'en'
                     ? 'bg-blue-city-primary text-white shadow-md'
                     : 'text-blue-city-text hover:text-blue-city-primary'
@@ -182,13 +182,13 @@ export const Navbar: React.FC = () => {
               </button>
               <button
                 onClick={() => currentLanguage !== 'hi' && toggleLanguage()}
-                className={`px-3 py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                className={`px-2 py-0.5 text-xs font-semibold rounded-full transition-all duration-300 ${
                   currentLanguage === 'hi'
                     ? 'bg-blue-city-primary text-white shadow-md'
                     : 'text-blue-city-text hover:text-blue-city-primary'
                 }`}
               >
-                हिं
+                हिं/मा
               </button>
             </div>
 
@@ -197,17 +197,17 @@ export const Navbar: React.FC = () => {
                 {isAdmin && (
                   <Link
                     to={ROUTES.ADMIN}
-                    className="text-blue-city-accent hover:text-blue-city-primary transition-colors duration-300 font-medium"
+                    className="text-sm text-blue-city-accent hover:text-blue-city-primary transition-colors duration-300 font-medium px-0"
                   >
                     {t('nav.admin')}
                   </Link>
                 )}
                 <Link to={ROUTES.ACCOUNT}>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" className="px-2 py-1">
                     {t('nav.myAccount')}
                   </Button>
                 </Link>
-                <Button size="sm" variant="secondary" onClick={handleLogout}>
+                <Button size="sm" variant="secondary" onClick={handleLogout} className="px-2 py-1">
                   {t('nav.logout')}
                 </Button>
               </>

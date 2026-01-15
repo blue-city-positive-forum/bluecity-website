@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import { Layout } from '../components/layout/Layout';
 import { Card } from '../components/ui/Card';
 import { Input } from '../components/ui/Input';
@@ -32,14 +33,41 @@ export const Contact: React.FC = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      // For now, just simulate submission
-      // In production, you'd send this to your backend
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Get EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Check if EmailJS is configured
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS not configured. Please set environment variables.');
+        showAlert('Email service not configured. Please contact us directly at bluecityahmedabad@gmail.com', 'error');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        from_phone: data.phone,
+        subject: data.subject,
+        message: data.message,
+        to_email: 'bluecityahmedabad@gmail.com', // Your email
+      };
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
       
       showAlert('Message sent successfully! We\'ll get back to you soon.', 'success');
       form.reset();
     } catch (error) {
-      showAlert('Failed to send message. Please try again.', 'error');
+      console.error('Failed to send email:', error);
+      showAlert('Failed to send message. Please try again or contact us directly at bluecityahmedabad@gmail.com', 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -85,42 +113,8 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Membership Form Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="max-w-6xl mx-auto px-4 pt-12 pb-8"
-        >
-          <div className="text-center max-w-2xl mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-blue-city-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <h2 className="text-3xl font-bold text-blue-city-text">
-                {t('contact.membershipForm')}
-              </h2>
-            </div>
-            <p className="text-gray-600 mb-6">
-              {t('contact.membershipFormDesc')}
-            </p>
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScIrAgybK2Bnr4F_i63SEoNNOW6uEQ6I-Tz_rfaM0GzhpjBPQ/viewform?usp=header', '_blank')}
-              className="inline-flex items-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
-              {t('contact.fillMembershipForm')}
-            </Button>
-          </div>
-        </motion.div>
-
         {/* Content Section */}
         <div className="max-w-6xl mx-auto py-12 px-4">
-          <div className="border-t border-gray-200 pt-8"></div>
           <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div

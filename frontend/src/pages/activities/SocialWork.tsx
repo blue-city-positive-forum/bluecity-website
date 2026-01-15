@@ -66,9 +66,62 @@ export const SocialWork: React.FC = () => {
               </p>
             </div>
 
+            {/* Images Gallery - Hidden on mobile, shown on laptop+ */}
+            <div className="hidden lg:block">
+              <div className="grid grid-cols-3 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="rounded-lg overflow-hidden shadow-md"
+                >
+                  <div className="relative h-56">
+                    <img
+                      src={`${import.meta.env.BASE_URL}social_work_images/media/image1.jpeg`}
+                      alt="Women Health Awareness Initiative"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="rounded-lg overflow-hidden shadow-md"
+                >
+                  <div className="relative h-56">
+                    <img
+                      src={`${import.meta.env.BASE_URL}social_work_images/media/image3.jpeg`}
+                      alt="Capacity Building and Youth Empowerment"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="rounded-lg overflow-hidden shadow-md"
+                >
+                  <div className="relative h-56">
+                    <img
+                      src={`${import.meta.env.BASE_URL}social_work_images/media/image5.jpeg`}
+                      alt="Community Infrastructure Development"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
             {/* Summary Title */}
-            <div className="border-t border-gray-200 pt-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
+            <div className="border-t border-gray-200 pt-8 lg:pt-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
                 {t('pages.socialWork.summaryTitle')}
               </h2>
 
@@ -78,30 +131,47 @@ export const SocialWork: React.FC = () => {
                   const Icon = initiativeIcons[index];
                   
                   return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                      className="flex gap-4 group"
-                    >
-                      {/* Icon */}
-                      <div className="flex-shrink-0 mt-1">
-                        <div className="flex items-center justify-center w-12 h-12 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors duration-300">
-                          <Icon className="w-6 h-6 text-blue-city-primary" />
+                    <React.Fragment key={index}>
+                      <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + index * 0.1 }}
+                        className="flex gap-4 group"
+                      >
+                        <div className="flex-shrink-0 mt-1">
+                          <div className="flex items-center justify-center w-12 h-12 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors duration-300">
+                            <Icon className="w-6 h-6 text-blue-city-primary" />
+                          </div>
                         </div>
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">
-                          {initiative.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                          {initiative.description}
-                        </p>
-                      </div>
-                    </motion.div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-gray-900 mb-3">
+                            {initiative.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            {initiative.description}
+                          </p>
+                        </div>
+                      </motion.div>
+
+                      {/* Mobile-only images - shown between initiatives */}
+                      {index < 3 && (
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.5 + index * 0.1 }}
+                          className="lg:hidden rounded-lg overflow-hidden shadow-md max-w-lg mx-auto my-6"
+                        >
+                          <div className="relative h-44">
+                            <img
+                              src={`${import.meta.env.BASE_URL}social_work_images/media/image${index === 0 ? '1' : index === 1 ? '3' : '5'}.jpeg`}
+                              alt={`Social Work Initiative ${index + 1}`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+                    </React.Fragment>
                   );
                 })}
               </div>

@@ -7,6 +7,7 @@
     "gallery": "Gallery",
     "joinUs": "Join Us",
     "matrimony": "Matrimony",
+    "membership": "Membership",
     "contact": "Contact Us",
     "admin": "Admin",
     "myAccount": "My Account",
@@ -19,8 +20,7 @@
     "managementTeam": "Management Team",
     "vision": "Vision",
     "mission": "Mission",
-    "objectives": "Objectives",
-    "history": "Marwar's History"
+    "objectives": "Objectives"
   },
   "help": {
     "medical": "Medical Help",
@@ -64,6 +64,7 @@
     "subtitle": "Connecting Marwaris in Ahmedabad",
     "welcome": "Welcome to Blue City Positive Forum",
     "tagline": "Your home away from home",
+    "organizationName": "BLUECITY POSITIVE FORUM, AHMEDABAD",
     "heroTitle": "Where Heart of Marwar Meets Soul of Ahmedabad",
     "heroDescription": "A spirited Marwari community thriving in the heart of Gujarat, nurturing our heritage through social upliftment, preservation of cultural values, festive traditions, and enduring bonds.",
     "joinParivar": "Join the Parivar",
@@ -200,13 +201,20 @@
     "location": "Location",
     "locationText": "Ahmedabad, Gujarat\nIndia",
     "whatsapp": "WhatsApp",
-    "whatsappText": "Chat with us on WhatsApp",
-    "membershipForm": "Membership Form",
-    "membershipFormDesc": "Interested in becoming a member? Fill out our membership form to start your journey with us.",
+    "whatsappText": "Chat with us on WhatsApp"
+  },
+  "membership": {
+    "title": "Membership Form",
+    "description": "Our Membership Committee reviews each application before Board approval. Submit your application and step into a growing community and changemaker purpose‑driven network.",
+    "formTitle": "Become a Member",
+    "formDescription": "Please fill out the application form below with accurate information. Our committee will review your application and contact you regarding the next steps.",
+    "formNote": "All information provided will be kept confidential and reviewed by the membership committee.",
+    "buttonText": "Fill Membership Form",
     "fillMembershipForm": "Fill Membership Form"
   },
   "matrimony": {
     "title": "Matrimony",
+    "exclusiveNote": "ONLY FOR MARWADI FAMILIES",
     "findMatch": "Find Your Perfect Match",
     "createProfile": "Create Profile",
     "viewProfiles": "View Profiles",
@@ -261,7 +269,8 @@
         {
           "name": "Shri Dinesh Goliya",
           "role": "Business Leader",
-          "description": "Representing the family behind the renowned Madhur Gur brand, carries forward an 80-year-old business tradition in Gujarat. He is widely recognized for his charitable nature and active contribution to social welfare."
+          "description": "Representing the family behind the renowned Madhur Gur brand, carries forward an 80-year-old business tradition in Gujarat. He is widely recognized for his charitable nature and active contribution to social welfare.",
+          "image": "/bluecity-jodhpur/management_team/dinesh_goliya.jpg"
         },
         {
           "name": "Advocate Shri Gaurav Soni",
@@ -457,7 +466,7 @@
         "table": [
           {
             "level": "Upto HSC (10+2) Standard level",
-            "amount": "Upto Rs.25000/- or the actual cost of fees as decided by the committee."
+            "amount": "Actual cost of fees or Upto Rs.25000/- as decided by the committee."
           },
           {
             "level": "Graduation (College Education)",
@@ -494,7 +503,7 @@
       "title": "Matrimony",
       "subtitle": "Finding Life Partners",
       "intro": "By the Community, For the Community. We know what matters most to our families: our traditions, our culture, and our dreams. This platform is tailor-made to help you find a right partner who truly understands your way of life.",
-      "formTitle": "Submit Your Matrimony Details",
+      "formTitle": "Profile Information",
       "formDescription": "Please fill out the form below with accurate information about yourself or your family member who is looking for a life partner. Our team will review your submission and get in touch with you.",
       "formNote": "All information provided will be kept confidential and shared only with interested families within our community.",
       "troubleViewing": "Having trouble viewing the form?",

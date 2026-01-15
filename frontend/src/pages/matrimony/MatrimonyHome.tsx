@@ -39,6 +39,14 @@ export const MatrimonyHome: React.FC = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="w-24 h-1 bg-white mx-auto rounded-full"
               />
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-blue-100 text-lg mt-4 font-semibold"
+              >
+                {t('matrimony.exclusiveNote')}
+              </motion.p>
             </motion.div>
           </div>
         </div>
@@ -57,6 +65,24 @@ export const MatrimonyHome: React.FC = () => {
                 {t('pages.matrimonyHome.intro')}
               </p>
             </div>
+
+            {/* Featured Image - Compact and optimized */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="rounded-lg md:rounded-xl overflow-hidden shadow-md max-w-xl mx-auto"
+            >
+              <div className="relative h-48 md:h-56">
+                <img
+                  src={`${import.meta.env.BASE_URL}matrimony.jpeg`}
+                  alt="Traditional Indian Wedding - Matrimony Services"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                  style={{ objectPosition: 'center 30%' }}
+                />
+              </div>
+            </motion.div>
 
             {/* Google Form Section */}
             <div className="border-t border-gray-200 pt-12">

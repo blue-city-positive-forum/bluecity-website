@@ -33,11 +33,23 @@ export const Mission: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-lg shadow-sm p-10 md:p-16"
+            className="space-y-10"
           >
-            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center">
-              {t('pages.mission.statement')}
-            </p>
+            {/* Mission Statement */}
+            <div className="bg-white rounded-lg shadow-sm p-10 md:p-16">
+              <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center">
+                {t('pages.mission.statement')}
+              </p>
+            </div>
+
+            {/* Featured Image - Hidden on mobile for better performance */}
+            <div className="rounded-xl overflow-hidden shadow-lg aspect-[21/9] hidden md:block">
+              <img
+                src={`${import.meta.env.BASE_URL}marwar_history/mehrangarh-fort.jpg`}
+                alt="Our Mission - Building Community"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
