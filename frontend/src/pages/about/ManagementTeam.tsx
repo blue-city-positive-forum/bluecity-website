@@ -135,7 +135,7 @@ export const ManagementTeam: React.FC = () => {
                         <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
                           {member.image ? (
                             <img 
-                              src={member.image} 
+                              src={`${import.meta.env.BASE_URL}${member.image}`} 
                               alt={member.name}
                               className="w-full h-full object-cover"
                             />
@@ -187,7 +187,7 @@ export const ManagementTeam: React.FC = () => {
                           <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
                             {member.image ? (
                               <img 
-                                src={member.image} 
+                                src={`${import.meta.env.BASE_URL}${member.image}`} 
                                 alt={member.name}
                                 className="w-full h-full object-cover"
                               />

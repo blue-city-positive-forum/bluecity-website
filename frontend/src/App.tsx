@@ -51,7 +51,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <LanguageProvider>
         <AlertContainer />
