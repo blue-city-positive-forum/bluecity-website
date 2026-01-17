@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent } from './ui/Card';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -35,25 +34,15 @@ export const Stories: React.FC = () => {
   const { ref, isInView } = useInView();
   const { t } = useTranslation();
 
-  const testimonials = [
+  const videos = [
     {
-      quote: t('home.stories.testimonial1Quote'),
-      name: t('home.stories.testimonial1Name'),
-      role: t('home.stories.testimonial1Role'),
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
+      src: "/bluecity-jodhpur/our_stories/story1.mp4",
+      title: "Our Story - Part 1"
     },
     {
-      quote: t('home.stories.testimonial2Quote'),
-      name: t('home.stories.testimonial2Name'),
-      role: t('home.stories.testimonial2Role'),
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
-    },
-    {
-      quote: t('home.stories.testimonial3Quote'),
-      name: t('home.stories.testimonial3Name'),
-      role: t('home.stories.testimonial3Role'),
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200",
-    },
+      src: "/bluecity-jodhpur/our_stories/story2.mp4",
+      title: "Our Story - Part 2"
+    }
   ];
 
   return (
@@ -81,43 +70,28 @@ export const Stories: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, idx) => (
+        {/* Videos Grid */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16 max-w-4xl mx-auto">
+          {videos.map((video, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + idx * 0.15 }}
+              className="w-full flex justify-center"
             >
-              <Card className="h-full relative">
-                <CardContent className="space-y-6">
-                  {/* Quote Icon */}
-                  <div className="text-6xl text-blue-city-primary/20 font-serif leading-none">
-                    "
-                  </div>
-
-                  {/* Quote */}
-                  <p className="text-gray-700 leading-relaxed text-lg -mt-8">
-                    {testimonial.quote}
-                  </p>
-
-                  {/* Author */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-blue-city-secondary/30">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-blue-city-primary/20"
-                    />
-                    <div>
-                      <div className="font-semibold text-blue-city-text">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-sm text-gray-600">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="relative overflow-hidden rounded-2xl shadow-soft-lg bg-gray-900 w-full max-w-[360px]">
+                <video
+                  className="w-full h-auto max-h-[640px]"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  aria-label={video.title}
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </motion.div>
           ))}
         </div>
