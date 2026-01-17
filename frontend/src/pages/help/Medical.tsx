@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/layout/Layout';
+import { Stethoscope, Ambulance, Droplets, Package, DollarSign, ShieldCheck, Heart } from 'lucide-react';
 
 export const Medical: React.FC = () => {
   const { t } = useTranslation();
@@ -48,12 +49,106 @@ export const Medical: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white rounded-lg shadow-sm p-10 md:p-16"
+            transition={{ delay: 0.3 }}
+            className="space-y-10"
           >
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {t('pages.medical.content')}
-            </p>
+            {/* Introduction */}
+            <div className="text-center">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                {t('pages.medical.intro')}
+              </p>
+            </div>
+
+            {/* What We Can Help With */}
+            <div className="border-t border-gray-200 pt-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+                {t('pages.medical.whatWeHelp.title')}
+              </h2>
+
+              {/* Doctors & Hospitals */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <Stethoscope className="w-6 h-6 text-blue-city-primary" />
+                  {t('pages.medical.whatWeHelp.doctors.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('pages.medical.whatWeHelp.doctors.description')}
+                </p>
+              </div>
+
+              {/* Ambulance Services */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <Ambulance className="w-6 h-6 text-blue-city-primary" />
+                  {t('pages.medical.whatWeHelp.ambulance.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('pages.medical.whatWeHelp.ambulance.description')}
+                </p>
+              </div>
+
+              {/* Blood Banks */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <Droplets className="w-6 h-6 text-blue-city-primary" />
+                  {t('pages.medical.whatWeHelp.bloodBank.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('pages.medical.whatWeHelp.bloodBank.description')}
+                </p>
+              </div>
+
+              {/* Medical Equipment */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <Package className="w-6 h-6 text-blue-city-primary" />
+                  {t('pages.medical.whatWeHelp.equipment.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('pages.medical.whatWeHelp.equipment.description')}
+                </p>
+              </div>
+
+              {/* Financial Support */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <DollarSign className="w-6 h-6 text-blue-city-primary" />
+                  {t('pages.medical.whatWeHelp.financial.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('pages.medical.whatWeHelp.financial.description')}
+                </p>
+              </div>
+            </div>
+
+            {/* Our Approach */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <ShieldCheck className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.medical.approach.title')}
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-600 leading-relaxed">
+                  <span className="w-1.5 h-1.5 bg-blue-city-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span>{t('pages.medical.approach.point1')}</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 leading-relaxed">
+                  <span className="w-1.5 h-1.5 bg-blue-city-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span>{t('pages.medical.approach.point2')}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Why This Matters */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                <Heart className="w-6 h-6 text-blue-city-primary" />
+                {t('pages.medical.whyMatters.title')}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('pages.medical.whyMatters.description')}
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

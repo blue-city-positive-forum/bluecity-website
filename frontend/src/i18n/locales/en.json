@@ -380,9 +380,41 @@
       }
     },
     "medical": {
-      "title": "Medical Help",
+      "title": "Medical Support",
       "subtitle": "Help",
-      "content": "We provide medical assistance and healthcare support to our community members, including connecting them with trusted healthcare professionals and facilities."
+      "intro": "Our community is committed to ensuring that no one feels alone during a medical need. We encourage everyone to connect with us for guidance, information, and support related to healthcare.",
+      "whatWeHelp": {
+        "title": "What We Can Help With",
+        "doctors": {
+          "title": "Suggestions and Guidance for specialised doctors and hospitals",
+          "description": "We offer general guidance on qualified trusted specialists and reputable hospitals based on publicly available information and community experience in Ahmedabad"
+        },
+        "ambulance": {
+          "title": "Information on ambulance services",
+          "description": "We guide you toward reliable emergency response providers in Ahmedabad."
+        },
+        "bloodBank": {
+          "title": "Information on Blood Banks",
+          "description": "We guide you towards reputed and reliable blood banks in Ahmedabad."
+        },
+        "equipment": {
+          "title": "Details about rental medical equipment",
+          "description": "Whether someone needs wheelchairs, oxygen cylinders, walkers, or other homecare instruments, we help point them to trusted rental services."
+        },
+        "financial": {
+          "title": "Financial Support",
+          "description": "We extend financial support selectively, based on individual cases. All approvals are at the discretion of the committee."
+        }
+      },
+      "approach": {
+        "title": "Our Approach",
+        "point1": "We provide information, not medical diagnosis or treatment.",
+        "point2": "We maintain privacy, respect, and neutrality in all interactions."
+      },
+      "whyMatters": {
+        "title": "Why This Matters",
+        "description": "A connected community is a healthier community. By sharing resources, knowledge, and support, we help each other access timely care and make informed decisions."
+      }
     },
     "generalHelp": {
       "title": "General Help",

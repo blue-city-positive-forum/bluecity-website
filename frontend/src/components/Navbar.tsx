@@ -29,9 +29,10 @@ export const Navbar: React.FC = () => {
 
   const currentLanguage = i18n.language || 'en';
 
-  const toggleLanguage = () => {
-    const newLang = currentLanguage === 'en' ? 'hi' : 'en';
-    i18n.changeLanguage(newLang);
+  const changeLanguage = (lang: string) => {
+    if (lang !== currentLanguage) {
+      i18n.changeLanguage(lang);
+    }
   };
 
   const navItems: NavItem[] = [
@@ -105,7 +106,7 @@ export const Navbar: React.FC = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+          <div className="hidden lg:flex items-center space-x-2 lg:space-x-4">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -171,7 +172,7 @@ export const Navbar: React.FC = () => {
             {/* Language Toggle */}
             <div className="relative inline-flex items-center p-0.5 bg-blue-city-secondary/20 rounded-full">
               <button
-                onClick={() => currentLanguage !== 'en' && toggleLanguage()}
+                onClick={() => changeLanguage('en')}
                 className={`px-2 py-0.5 text-xs font-semibold rounded-full transition-all duration-300 ${
                   currentLanguage === 'en'
                     ? 'bg-blue-city-primary text-white shadow-md'
@@ -181,7 +182,7 @@ export const Navbar: React.FC = () => {
                 EN
               </button>
               <button
-                onClick={() => currentLanguage !== 'hi' && toggleLanguage()}
+                onClick={() => changeLanguage('hi')}
                 className={`px-2 py-0.5 text-xs font-semibold rounded-full transition-all duration-300 ${
                   currentLanguage === 'hi'
                     ? 'bg-blue-city-primary text-white shadow-md'
@@ -217,7 +218,7 @@ export const Navbar: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-blue-city-text hover:bg-blue-city-secondary/20 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-blue-city-text hover:bg-blue-city-secondary/20 transition-colors"
           >
             <svg
               className="w-6 h-6"
@@ -243,7 +244,7 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden pb-4 max-h-[calc(100vh-80px)] overflow-y-auto"
+            className="lg:hidden pb-4 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
             {navItems.map((item) => (
               <div key={item.name} className="border-b border-gray-100 last:border-b-0">
@@ -315,11 +316,7 @@ export const Navbar: React.FC = () => {
               </div>
               <div className="flex items-center p-1.5 bg-blue-city-secondary/20 rounded-full max-w-xs mx-auto">
                 <button
-                  onClick={() => {
-                    if (currentLanguage !== 'en') {
-                      toggleLanguage();
-                    }
-                  }}
+                  onClick={() => changeLanguage('en')}
                   className={`flex-1 px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
                     currentLanguage === 'en'
                       ? 'bg-blue-city-primary text-white shadow-md'
@@ -329,11 +326,7 @@ export const Navbar: React.FC = () => {
                   English
                 </button>
                 <button
-                  onClick={() => {
-                    if (currentLanguage !== 'hi') {
-                      toggleLanguage();
-                    }
-                  }}
+                  onClick={() => changeLanguage('hi')}
                   className={`flex-1 px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
                     currentLanguage === 'hi'
                       ? 'bg-blue-city-primary text-white shadow-md'
