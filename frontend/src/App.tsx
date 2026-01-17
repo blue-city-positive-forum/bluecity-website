@@ -51,7 +51,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <BrowserRouter basename="/bluecity-jodhpur">
+    <BrowserRouter>
       <ScrollToTop />
       <LanguageProvider>
         <AlertContainer />

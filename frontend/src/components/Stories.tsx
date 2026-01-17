@@ -36,11 +36,11 @@ export const Stories: React.FC = () => {
 
   const videos = [
     {
-      src: "/bluecity-jodhpur/our_stories/story1.mp4",
+      src: "/our_stories/story1.mp4",
       title: "Our Story - Part 1"
     },
     {
-      src: "/bluecity-jodhpur/our_stories/story2.mp4",
+      src: "/our_stories/story2.mp4",
       title: "Our Story - Part 2"
     }
   ];

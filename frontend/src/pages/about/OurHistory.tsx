@@ -77,7 +77,7 @@ export const OurHistory: React.FC = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[21/9] group"
             >
               <img
-                src="/bluecity-jodhpur/marwar_history/mehrangarh-fort.jpg"
+                src="/marwar_history/mehrangarh-fort.jpg"
                 alt="Mehrangarh Fort - The magnificent fort of Jodhpur"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -111,7 +111,7 @@ export const OurHistory: React.FC = () => {
                   <div className="sticky top-24">
                     <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
                       <img
-                        src="/bluecity-jodhpur/marwar_history/rao_jodha.jpg"
+                        src="/marwar_history/rao_jodha.jpg"
                         alt="Rao Jodha - Founder of Jodhpur"
                         className="w-full h-full object-cover"
                         loading="lazy"
@@ -157,7 +157,7 @@ export const OurHistory: React.FC = () => {
                     className="rounded-xl overflow-hidden shadow-md aspect-[4/3] group relative"
                   >
                     <img
-                      src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                      src={`/marwar_history/${item.image}`}
                       alt={t(`pages.ourHistory.images.${item.labelKey}`)}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
@@ -186,7 +186,7 @@ export const OurHistory: React.FC = () => {
                 <div className="lg:col-span-2 order-2 lg:order-1">
                   <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
                     <img
-                      src="/bluecity-jodhpur/marwar_history/jodhpur_shop_art.jpeg"
+                      src="/marwar_history/jodhpur_shop_art.jpeg"
                       alt="Traditional Marwari crafts and art"
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -220,7 +220,7 @@ export const OurHistory: React.FC = () => {
                     className="rounded-lg overflow-hidden shadow-md aspect-square group relative"
                   >
                     <img
-                      src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                      src={`/marwar_history/${item.image}`}
                       alt={t(`pages.ourHistory.images.${item.labelKey}`)}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       loading="lazy"
@@ -262,7 +262,7 @@ export const OurHistory: React.FC = () => {
                       className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group relative"
                     >
                       <img
-                        src={`/bluecity-jodhpur/marwar_history/${item.image}`}
+                        src={`/marwar_history/${item.image}`}
                         alt={t(`pages.ourHistory.images.${item.labelKey}`)}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
