@@ -83,13 +83,20 @@ export const CTA: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center max-w-3xl mx-auto text-white"
+            className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-white"
           >
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-3">📧</div>
               <div className="font-semibold mb-1">{t('home.cta.emailLabel')}</div>
               <a href="mailto:bluecityahmedabad@gmail.com" className="text-blue-100 hover:text-white transition-colors">
                 bluecityahmedabad@gmail.com
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl mb-3">📱</div>
+              <div className="font-semibold mb-1">{t('home.cta.phoneLabel')}</div>
+              <a href="tel:+916359011140" className="text-blue-100 hover:text-white transition-colors">
+                +91-6359011140
               </a>
             </div>
           </motion.div>

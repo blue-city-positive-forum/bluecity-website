@@ -141,6 +141,7 @@
       "becomeMember": "Become a Member",
       "contactUs": "Contact Us",
       "emailLabel": "Email",
+      "phoneLabel": "Phone",
       "whatsappLabel": "WhatsApp",
       "locationLabel": "Location",
       "locationValue": "Ahmedabad, Gujarat"
@@ -198,7 +199,7 @@
     "contactInfo": "Contact Information",
     "followUs": "Follow Us",
     "responseTimes": "Response Times",
-    "responseTimesText": "We typically respond to all inquiries within 24-48 hours. For urgent matters, please email us directly at bluecityahmedabad@gmail.com.",
+    "responseTimesText": "We typically respond to all inquiries within 24-48 hours. For urgent matters, please call us directly at +91-6359011140.",
     "location": "Location",
     "locationText": "Ahmedabad, Gujarat\nIndia",
     "whatsapp": "WhatsApp",

@@ -141,6 +141,7 @@
       "becomeMember": "सदस्य बणो",
       "contactUs": "संपर्क करो",
       "emailLabel": "ईमेल",
+      "phoneLabel": "फोन",
       "whatsappLabel": "व्हाट्सएप",
       "locationLabel": "जगह",
       "locationValue": "अहमदाबाद, गुजरात"
@@ -198,7 +199,7 @@
     "contactInfo": "संपर्क री जानकारी",
     "followUs": "म्हां नै फॉलो करो",
     "responseTimes": "जवाब रो टेम",
-    "responseTimesText": "म्हां आम तौर माथै 24-48 घंटां रे भीतर सगळी पूछताछ रो जवाब देवां। आपातकालीन मामलां वास्ते, कृपया म्हां नै bluecityahmedabad@gmail.com माथै ईमेल करो।",
+    "responseTimesText": "म्हां आम तौर माथै 24-48 घंटां रे भीतर सगळी पूछताछ रो जवाब देवां। आपातकालीन मामलां वास्ते, कृपया म्हां नै +91-6359011140 माथै कॉल करो।",
     "location": "जगह",
     "locationText": "अहमदाबाद, गुजरात\nभारत",
     "whatsapp": "व्हाट्सएप",
