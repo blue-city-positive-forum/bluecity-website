@@ -37,10 +37,12 @@ export const Stories: React.FC = () => {
   const videos = [
     {
       src: `${import.meta.env.BASE_URL}our_stories/story1.mp4`,
+      poster: `${import.meta.env.BASE_URL}our_stories/story1.jpg`,
       title: "Our Story - Part 1"
     },
     {
       src: `${import.meta.env.BASE_URL}our_stories/story2.mp4`,
+      poster: `${import.meta.env.BASE_URL}our_stories/story2.jpg`,
       title: "Our Story - Part 2"
     }
   ];
@@ -86,9 +88,10 @@ export const Stories: React.FC = () => {
                   controls
                   preload="metadata"
                   playsInline
+                  poster={video.poster}
                   aria-label={video.title}
                 >
-                  <source src={video.src} type="video/mp4" />
+                  <source src={`${video.src}#t=0.5`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
