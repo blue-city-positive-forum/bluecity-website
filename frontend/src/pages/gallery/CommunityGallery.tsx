@@ -6,37 +6,37 @@ import { Heart, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/community_gettogether_images/media/image1.jpeg',
+    src: 'community_gettogether_images/media/image1.jpeg',
     title: 'Haryali Teej Celebration',
     description: 'Celebration of Haryali Teej by Marwari Ladies at Ahmedabad',
     alt: 'Haryali Teej'
   },
   {
-    src: '/community_gettogether_images/media/image2.jpeg',
+    src: 'community_gettogether_images/media/image2.jpeg',
     title: 'Gangaur Festival',
     description: 'Celebration of Gangaur',
     alt: 'Gangaur Celebration'
   },
   {
-    src: '/community_gettogether_images/media/image3.jpeg',
+    src: 'community_gettogether_images/media/image3.jpeg',
     title: 'Independence Day Celebration',
     description: 'Fancy Dress Competition for Kids On Eve of Independence Day Celebration',
     alt: 'Independence Day'
   },
   {
-    src: '/community_gettogether_images/media/image4.jpeg',
+    src: 'community_gettogether_images/media/image4.jpeg',
     title: 'Celebration with Dignitaries',
     description: 'Mayor Smt Pratibha Jain with Shri Zabbarmal Sa Sankhlecha, Shri Deepak Jain, Shri Dr. M M Singhi and Shri CA Rajendra Agarwal In celebration at Bluecity Positive Forum',
     alt: 'Community Leaders'
   },
   {
-    src: '/community_gettogether_images/media/image5.jpeg',
+    src: 'community_gettogether_images/media/image5.jpeg',
     title: 'Pre-Deepawali Celebration',
     description: 'Pre-Deepawali Celebration Get together',
     alt: 'Deepawali Celebration'
   },
   {
-    src: '/community_gettogether_images/media/image6.jpeg',
+    src: 'community_gettogether_images/media/image6.jpeg',
     title: 'Monsoon Picnic',
     description: 'Monsoon Picnic',
     alt: 'Monsoon Picnic'

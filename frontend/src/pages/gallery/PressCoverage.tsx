@@ -6,61 +6,61 @@ import { Newspaper, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/media_footprint_images/media/image1.jpeg',
+    src: 'media_footprint_images/media/image1.jpeg',
     title: 'Press Coverage 1',
     description: '',
     alt: 'Media Coverage 1'
   },
   {
-    src: '/media_footprint_images/media/image2.jpeg',
+    src: 'media_footprint_images/media/image2.jpeg',
     title: 'Press Coverage 2',
     description: '',
     alt: 'Media Coverage 2'
   },
   {
-    src: '/media_footprint_images/media/image3.jpeg',
+    src: 'media_footprint_images/media/image3.jpeg',
     title: 'Press Coverage 3',
     description: '',
     alt: 'Media Coverage 3'
   },
   {
-    src: '/media_footprint_images/media/image4.jpeg',
+    src: 'media_footprint_images/media/image4.jpeg',
     title: 'Press Coverage 4',
     description: '',
     alt: 'Media Coverage 4'
   },
   {
-    src: '/media_footprint_images/media/image5.jpeg',
+    src: 'media_footprint_images/media/image5.jpeg',
     title: 'Press Coverage 5',
     description: '',
     alt: 'Media Coverage 5'
   },
   {
-    src: '/media_footprint_images/media/image6.jpeg',
+    src: 'media_footprint_images/media/image6.jpeg',
     title: 'Press Coverage 6',
     description: '',
     alt: 'Media Coverage 6'
   },
   {
-    src: '/media_footprint_images/media/image7.jpeg',
+    src: 'media_footprint_images/media/image7.jpeg',
     title: 'Press Coverage 7',
     description: '',
     alt: 'Media Coverage 7'
   },
   {
-    src: '/media_footprint_images/media/image8.jpeg',
+    src: 'media_footprint_images/media/image8.jpeg',
     title: 'Press Coverage 8',
     description: '',
     alt: 'Media Coverage 8'
   },
   {
-    src: '/media_footprint_images/media/image9.jpg',
+    src: 'media_footprint_images/media/image9.jpg',
     title: 'Press Coverage 9',
     description: '',
     alt: 'Media Coverage 9'
   },
   {
-    src: '/media_footprint_images/media/image10.jpeg',
+    src: 'media_footprint_images/media/image10.jpeg',
     title: 'Press Coverage 10',
     description: '',
     alt: 'Media Coverage 10'

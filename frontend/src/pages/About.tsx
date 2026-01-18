@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Layout } from '../components/layout/Layout';
 import { Card } from '../components/ui/Card';
 import { useInView } from '../hooks/useInView';
+import { ROUTES } from '../utils/constants';
 
 export const About: React.FC = () => {
   const { ref, isInView } = useInView();
+  const navigate = useNavigate();
 
   return (
     <Layout>
@@ -267,11 +270,12 @@ export const About: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8">
               Join us in celebrating our culture and building lasting connections
             </p>
-            <a href="/joinus">
-              <button className="px-8 py-4 bg-blue-city-primary text-white font-semibold rounded-2xl hover:bg-blue-700 transition-colors shadow-lg">
-                Join Blue City Positive Forum
-              </button>
-            </a>
+            <button 
+              onClick={() => navigate(ROUTES.JOIN_US)}
+              className="px-8 py-4 bg-blue-city-primary text-white font-semibold rounded-2xl hover:bg-blue-700 transition-colors shadow-lg"
+            >
+              Join Blue City Positive Forum
+            </button>
           </Card>
         </section>
       </div>

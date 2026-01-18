@@ -6,49 +6,49 @@ import { Users, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/social_work_images/media/image1.jpeg',
+    src: 'social_work_images/media/image1.jpeg',
     title: 'Women Health Awareness',
     description: 'Educative session for women on pre‑ and post‑menopause care, cervical cancer awareness, and essential medical hygiene, conducted by experts from Lilavati Hospital, Gandhinagar.',
     alt: 'Women Health Session'
   },
   {
-    src: '/social_work_images/media/image2.jpeg',
+    src: 'social_work_images/media/image2.jpeg',
     title: 'Climate & Animal Welfare Seminar',
     description: 'Arranged a seminar addressing the growing impact of rapid urbanisation and climate change on animal life, attended by dignitaries including the trustees of Mandal Panjra Pole, Ahmedabad Mayor Smt. Pratibha Jain, Dr. Bhushan Punani of the Blind People\'s Association, Dr. M. M. Singhi, and Deepak Jain from Bluecity Positive Forum.',
     alt: 'Climate Seminar'
   },
   {
-    src: '/social_work_images/media/image3.jpeg',
+    src: 'social_work_images/media/image3.jpeg',
     title: 'Youth Capacity Building',
     description: 'A capacity‑building session for young women, designed to enhance soft skills and strengthen public speaking abilities.',
     alt: 'Capacity Building Session'
   },
   {
-    src: '/social_work_images/media/image4.jpeg',
+    src: 'social_work_images/media/image4.jpeg',
     title: 'UDAAN Youth Empowerment Camp',
     description: 'Arranged "UDAAN" Youth Empowerment Camp for Specially Abled Citizens at Jodhpur, Rajasthan with DORAI Foundation.',
     alt: 'UDAAN Camp'
   },
   {
-    src: '/social_work_images/media/image5.jpeg',
+    src: 'social_work_images/media/image5.jpeg',
     title: 'School Infrastructure Support',
     description: 'Basic infrastructure development support provided to the Ahmedabad Municipal Primary School at Prem Darwaja.',
     alt: 'School Support'
   },
   {
-    src: '/social_work_images/media/image6.jpeg',
+    src: 'social_work_images/media/image6.jpeg',
     title: 'Cultural Values Session',
     description: 'Organised an interactive session with esteemed Marwari motivational speaker Shri Shantilalji Golecha focused on preserving our traditions and cultural values with young participants.',
     alt: 'Cultural Session'
   },
   {
-    src: '/social_work_images/media/image7.jpeg',
+    src: 'social_work_images/media/image7.jpeg',
     title: 'Women Empowerment Discussion',
     description: 'Actively collaborated with Rajasthan Patrika in organising an in‑depth discussion and analysis on women\'s empowerment in India.',
     alt: 'Women Empowerment'
   },
   {
-    src: '/social_work_images/media/image8.jpeg',
+    src: 'social_work_images/media/image8.jpeg',
     title: 'Deepawali Collection Drive',
     description: 'A community collection drive to gather unused household materials and electronic items from different localities of Ahmedabad city for distribution to underprivileged citizens this Deepawali.',
     alt: 'Collection Drive'
