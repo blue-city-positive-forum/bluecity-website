@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../utils/constants';
+import { trackButtonClick, trackOutboundLink } from '../utils/analytics';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -71,7 +72,10 @@ export const CTA: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <button
-              onClick={() => navigate(ROUTES.JOIN_US)}
+              onClick={() => {
+                trackButtonClick('Become Member', 'Home CTA');
+                navigate(ROUTES.JOIN_US);
+              }}
               className="px-10 py-4 text-lg font-semibold rounded-2xl bg-blue-city-accent text-white hover:bg-orange-700 shadow-soft-lg transition-all duration-300 hover:scale-105 active:scale-95"
             >
               {t('home.cta.becomeMember')}
@@ -112,6 +116,7 @@ export const CTA: React.FC = () => {
               href="https://www.instagram.com/bluecityahmedabad/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackOutboundLink('https://www.instagram.com/bluecityahmedabad/', 'Instagram from Home CTA')}
               className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
               aria-label="Instagram"
             >

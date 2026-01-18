@@ -39,6 +39,7 @@ bluecity/
 - **React Router** for routing
 - **i18next** for internationalization
 - **EmailJS** for contact form (no backend required)
+- **Google Analytics 4** for website analytics and tracking
 
 ## 📦 Quick Start
 
@@ -66,7 +67,12 @@ Create `frontend/.env`:
 VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+
+# Google Analytics 4 (Optional - for tracking website analytics)
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
+
+> 📊 **Google Analytics Setup:** See [GOOGLE_ANALYTICS_SETUP.md](./GOOGLE_ANALYTICS_SETUP.md) for detailed instructions on setting up and using Google Analytics 4.
 
 ### Run Development Server
 

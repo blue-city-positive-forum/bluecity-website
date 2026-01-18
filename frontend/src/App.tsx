@@ -1,10 +1,12 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AlertContainer } from './components/ui/Alert';
 import { Spinner } from './components/ui/Spinner';
 import { LanguageProvider } from './components/LanguageProvider';
 import { ScrollToTop } from './components/common/ScrollToTop';
 import { ROUTES } from './utils/constants';
+import { initGA } from './utils/analytics';
+import { usePageTracking } from './hooks/usePageTracking';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
@@ -49,9 +51,12 @@ const PageLoader = () => (
   </div>
 );
 
-function App() {
+// App content wrapper to use hooks that require Router context
+const AppContent = () => {
+  usePageTracking(); // Automatically track page views on route changes
+
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <>
       <ScrollToTop />
       <LanguageProvider>
         <AlertContainer />
@@ -99,6 +104,19 @@ function App() {
         </Routes>
       </Suspense>
       </LanguageProvider>
+    </>
+  );
+};
+
+function App() {
+  // Initialize Google Analytics once when app mounts
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <AppContent />
     </BrowserRouter>
   );
 }
