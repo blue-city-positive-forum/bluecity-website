@@ -12,23 +12,20 @@ export const Home: React.FC = () => {
       <Hero />
       {/* Continuous background wrapper for all content sections */}
       <div className="relative bg-white">
-        {/* Continuous decorative background blobs that span all sections */}
+        {/* Optimized decorative background blobs - reduced from 8 to 4 for better mobile performance */}
+        {/* These will be hidden on mobile devices via CSS (see index.css) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Top area blobs */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-city-secondary/30 rounded-full blur-3xl"></div>
-          <div className="absolute top-20 left-0 w-[450px] h-[450px] bg-blue-city-accent/20 rounded-full blur-3xl"></div>
+          {/* Top area blob */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-city-secondary/25 rounded-full blur-3xl"></div>
           
           {/* Middle area blobs */}
-          <div className="absolute top-[30%] right-1/4 w-[550px] h-[550px] bg-blue-city-accent/25 rounded-full blur-3xl"></div>
-          <div className="absolute top-[40%] left-10 w-[500px] h-[500px] bg-blue-city-secondary/25 rounded-full blur-3xl"></div>
+          <div className="absolute top-[40%] left-0 w-[450px] h-[450px] bg-blue-city-accent/20 rounded-full blur-3xl"></div>
           
-          {/* Lower middle blobs */}
-          <div className="absolute top-[60%] right-0 w-[480px] h-[480px] bg-blue-city-accent/30 rounded-full blur-3xl"></div>
-          <div className="absolute top-[70%] left-1/4 w-[450px] h-[450px] bg-blue-city-secondary/20 rounded-full blur-3xl"></div>
+          {/* Lower area blob */}
+          <div className="absolute top-[70%] right-1/4 w-[400px] h-[400px] bg-blue-city-secondary/20 rounded-full blur-3xl"></div>
           
-          {/* Bottom area blobs */}
-          <div className="absolute bottom-20 right-1/3 w-[500px] h-[500px] bg-blue-city-accent/25 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-blue-city-secondary/30 rounded-full blur-3xl"></div>
+          {/* Bottom area blob */}
+          <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-blue-city-accent/25 rounded-full blur-3xl"></div>
         </div>
         
         {/* Content sections */}

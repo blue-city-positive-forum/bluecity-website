@@ -14,6 +14,9 @@ body {
   margin: 0;
     padding: 0;
     font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* Performance: Enable GPU acceleration for transforms */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Ensure proper Hindi text rendering */
@@ -46,9 +49,65 @@ body {
   .shadow-soft-lg {
     box-shadow: 0 10px 15px -3px rgba(58, 110, 165, 0.15), 0 4px 6px -2px rgba(58, 110, 165, 0.1);
   }
+
+  /* Performance: Disable blur effects on mobile devices */
+  @media (max-width: 767px) {
+    .blur-3xl,
+    .blur-2xl {
+      display: none !important;
+    }
+  }
+
+  /* Performance: Reduce blur intensity on tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .blur-3xl {
+      filter: blur(40px) !important;
+    }
+  }
+
+  /* Performance: GPU acceleration hints for animated elements */
+  .will-change-transform {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Performance: Enable CSS containment for better rendering */
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-paint {
+    contain: paint;
+  }
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling - disable on mobile for better performance */
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }

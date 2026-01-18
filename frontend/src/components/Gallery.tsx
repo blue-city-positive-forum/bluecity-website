@@ -3,34 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../utils/constants';
-
-const useInView = () => {
-  const [isInView, setIsInView] = React.useState(false);
-  const ref = React.useRef<HTMLElement>(null);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  return { ref, isInView };
-};
+import { useOptimizedInView } from '../hooks/useOptimizedInView';
+import { useAnimationConfig, useIsMobile } from '../hooks/usePerformance';
 
 // Static gallery images from public folder
 const galleryImages = [
@@ -69,19 +43,21 @@ const galleryImages = [
 ];
 
 export const Gallery: React.FC = () => {
-  const { ref, isInView } = useInView();
+  const { ref, isInView } = useOptimizedInView();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const animConfig = useAnimationConfig();
+  const isMobile = useIsMobile();
 
   return (
-    <section id="gallery" ref={ref} className="py-20 md:py-32 relative">
+    <section id="gallery" ref={ref as React.RefObject<HTMLElement>} className="py-20 md:py-32 relative contain-layout">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={animConfig.initial !== false ? { opacity: 0, y: 30 } : false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: animConfig.duration }}
+          className="text-center mb-16 will-change-transform"
         >
           <h2 className="text-sm font-semibold text-blue-city-accent uppercase tracking-wider mb-2">
             {t('home.gallery.subtitle')}
@@ -95,42 +71,65 @@ export const Gallery: React.FC = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-        >
-          {galleryImages.map((image, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-              onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
-              className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square"
-            >
-              <img
-                src={image.url}
-                alt={image.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-3 md:p-4 text-white">
-                  <h4 className="font-semibold text-xs md:text-sm line-clamp-2">{image.title}</h4>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {galleryImages.map((image, idx) => {
+            // On mobile, don't animate individual items for better performance
+            const shouldAnimateItem = !isMobile && idx < animConfig.maxAnimatedItems;
+            
+            return shouldAnimateItem ? (
+              <motion.div
+                key={idx}
+                initial={animConfig.initial !== false ? { opacity: 0, scale: 0.95 } : false}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ 
+                  duration: animConfig.duration * 0.625, 
+                  delay: animConfig.delay(0.3 + idx * 0.1) 
+                }}
+                onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+                className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square will-change-transform"
+              >
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-full object-cover md:transition-transform md:duration-500 md:group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300 flex items-end">
+                  <div className="p-3 md:p-4 text-white">
+                    <h4 className="font-semibold text-xs md:text-sm line-clamp-2">{image.title}</h4>
+                  </div>
+                </div>
+              </motion.div>
+            ) : (
+              <div
+                key={idx}
+                onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+                className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square"
+              >
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-full object-cover md:transition-transform md:duration-500 md:group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300 flex items-end">
+                  <div className="p-3 md:p-4 text-white">
+                    <h4 className="font-semibold text-xs md:text-sm line-clamp-2">{image.title}</h4>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            );
+          })}
+        </div>
 
         {/* View More Button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={animConfig.initial !== false ? { opacity: 0, y: 20 } : false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-12"
+          transition={{ duration: animConfig.duration, delay: animConfig.delay(0.5) }}
+          className="text-center mt-12 will-change-transform"
         >
           <button 
             onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
