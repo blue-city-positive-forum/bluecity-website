@@ -11,7 +11,7 @@ import { Button } from '../components/ui/Button';
 import { Spinner } from '../components/ui/Spinner';
 import { useUIStore } from '../store/uiStore';
 import { contactSchema } from '../utils/validators';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ContactFormData {
   name: string;
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="p-8">
+            <Card className="p-8 relative">
               <h2 className="text-2xl font-bold text-blue-city-text mb-6">{t('contact.sendMessage')}</h2>
               
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -129,6 +129,7 @@ export const Contact: React.FC = () => {
                   {...form.register('name')}
                   error={form.formState.errors.name?.message}
                   required
+                  disabled={isSubmitting}
                 />
 
                 <Input
@@ -137,6 +138,7 @@ export const Contact: React.FC = () => {
                   {...form.register('email')}
                   error={form.formState.errors.email?.message}
                   required
+                  disabled={isSubmitting}
                 />
 
                 <Input
@@ -144,6 +146,7 @@ export const Contact: React.FC = () => {
                   {...form.register('subject')}
                   error={form.formState.errors.subject?.message}
                   required
+                  disabled={isSubmitting}
                 />
 
                 <Textarea
@@ -155,6 +158,7 @@ export const Contact: React.FC = () => {
                   required
                   maxLength={500}
                   showCharCount
+                  disabled={isSubmitting}
                 />
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
@@ -168,6 +172,36 @@ export const Contact: React.FC = () => {
                   )}
                 </Button>
               </form>
+
+              {/* Loading Overlay */}
+              <AnimatePresence>
+                {isSubmitting && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute inset-0 bg-white/60 backdrop-blur-sm rounded-lg flex items-center justify-center z-10"
+                  >
+                    <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col items-center space-y-4">
+                      <div className="relative">
+                        <Spinner size="lg" color="primary" />
+                        <div className="absolute inset-0 animate-ping">
+                          <Spinner size="lg" color="primary" className="opacity-20" />
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-lg font-semibold text-blue-city-primary">
+                          {t('contact.sending')}
+                        </p>
+                        <p className="text-sm text-gray-600 mt-1">
+                          {t('contact.pleaseWait')}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </Card>
           </motion.div>
 
