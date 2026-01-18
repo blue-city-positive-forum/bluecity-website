@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '../utils/constants';
 import { useOptimizedInView } from '../hooks/useOptimizedInView';
 import { useAnimationConfig, useIsMobile } from '../hooks/usePerformance';
+import { trackGA4Event } from '../utils/analytics';
 
 // Static gallery images from public folder
 const galleryImages = [
@@ -85,7 +86,14 @@ export const Gallery: React.FC = () => {
                   duration: animConfig.duration * 0.625, 
                   delay: animConfig.delay(0.3 + idx * 0.1) 
                 }}
-                onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+                onClick={() => {
+                  trackGA4Event('gallery_image_click', {
+                    image_title: image.title,
+                    image_position: idx + 1,
+                    location: 'Home Page Gallery Preview'
+                  });
+                  navigate(ROUTES.GALLERY_SOCIAL_WORK);
+                }}
                 className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square will-change-transform"
               >
                 <img
@@ -104,7 +112,14 @@ export const Gallery: React.FC = () => {
             ) : (
               <div
                 key={idx}
-                onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+                onClick={() => {
+                  trackGA4Event('gallery_image_click', {
+                    image_title: image.title,
+                    image_position: idx + 1,
+                    location: 'Home Page Gallery Preview'
+                  });
+                  navigate(ROUTES.GALLERY_SOCIAL_WORK);
+                }}
                 className="relative group overflow-hidden rounded-2xl shadow-soft cursor-pointer aspect-square"
               >
                 <img
@@ -132,7 +147,13 @@ export const Gallery: React.FC = () => {
           className="text-center mt-12 will-change-transform"
         >
           <button 
-            onClick={() => navigate(ROUTES.GALLERY_SOCIAL_WORK)}
+            onClick={() => {
+              trackGA4Event('button_click', {
+                button_name: 'View Full Gallery',
+                location: 'Home Page Gallery Section'
+              });
+              navigate(ROUTES.GALLERY_SOCIAL_WORK);
+            }}
             className="inline-flex items-center gap-2 text-blue-city-primary font-semibold text-lg hover:text-blue-city-accent transition-colors cursor-pointer group"
           >
             {t('home.gallery.viewFullGallery')}

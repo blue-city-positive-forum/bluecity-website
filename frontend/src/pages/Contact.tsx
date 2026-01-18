@@ -12,6 +12,7 @@ import { Spinner } from '../components/ui/Spinner';
 import { useUIStore } from '../store/uiStore';
 import { contactSchema } from '../utils/validators';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackFormSubmission, trackGA4Event, trackOutboundLink } from '../utils/analytics';
 
 interface ContactFormData {
   name: string;
@@ -61,10 +62,22 @@ export const Contact: React.FC = () => {
         publicKey
       );
       
+      // Track successful form submission
+      trackFormSubmission('Contact Form');
+      trackGA4Event('contact_form_success', {
+        subject: data.subject,
+      });
+      
       showAlert('Message sent successfully! We\'ll get back to you soon.', 'success');
       form.reset();
     } catch (error) {
       console.error('Failed to send email:', error);
+      
+      // Track form submission failure
+      trackGA4Event('contact_form_error', {
+        error_message: error instanceof Error ? error.message : 'Unknown error',
+      });
+      
       showAlert('Failed to send message. Please try again or contact us directly at bluecityahmedabad@gmail.com', 'error');
     } finally {
       setIsSubmitting(false);
@@ -269,6 +282,7 @@ export const Contact: React.FC = () => {
                   href="https://www.instagram.com/bluecityahmedabad/" 
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackOutboundLink('https://www.instagram.com/bluecityahmedabad/', 'Instagram from Contact Page')}
                   className="w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 rounded-lg flex items-center justify-center text-white hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 transition-all duration-300 hover:scale-110"
                   aria-label="Instagram"
                 >

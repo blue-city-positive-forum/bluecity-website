@@ -1,11 +1,27 @@
 import ReactGA from 'react-ga4';
 
+// Track if GA has been initialized to prevent double initialization
+let isGAInitialized = false;
+
 /**
  * Initialize Google Analytics
  * Should be called once when the app starts
+ * 
+ * DUPLICATE PREVENTION:
+ * - Uses module-level flag to prevent double initialization
+ * - React StrictMode safe: Second call is a no-op
+ * - ReactGA.initialize is also internally idempotent
  */
 export const initGA = () => {
   const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  
+  // Prevent double initialization (important for React StrictMode in development)
+  if (isGAInitialized) {
+    if (import.meta.env.DEV) {
+      console.log('Google Analytics already initialized, skipping...');
+    }
+    return;
+  }
   
   if (measurementId) {
     ReactGA.initialize(measurementId, {
@@ -13,7 +29,10 @@ export const initGA = () => {
         debug_mode: import.meta.env.DEV, // Enable debug mode in development
       },
     });
-    console.log('Google Analytics initialized with ID:', measurementId);
+    isGAInitialized = true;
+    if (import.meta.env.DEV) {
+      console.log('Google Analytics initialized with ID:', measurementId);
+    }
   } else {
     console.warn('Google Analytics Measurement ID not found. Analytics will not be tracked.');
   }
@@ -30,7 +49,9 @@ export const trackPageView = (path: string, title?: string) => {
       page: path,
       title: title || document.title,
     });
-    console.log('Page view tracked:', path);
+    if (import.meta.env.DEV) {
+      console.log('Page view tracked:', path);
+    }
   }
 };
 
@@ -54,7 +75,9 @@ export const trackEvent = (
       label,
       value,
     });
-    console.log('Event tracked:', { category, action, label, value });
+    if (import.meta.env.DEV) {
+      console.log('Event tracked:', { category, action, label, value });
+    }
   }
 };
 
@@ -66,7 +89,9 @@ export const trackEvent = (
 export const trackGA4Event = (eventName: string, eventParams?: Record<string, any>) => {
   if (import.meta.env.VITE_GA_MEASUREMENT_ID) {
     ReactGA.event(eventName, eventParams);
-    console.log('GA4 Event tracked:', eventName, eventParams);
+    if (import.meta.env.DEV) {
+      console.log('GA4 Event tracked:', eventName, eventParams);
+    }
   }
 };
 

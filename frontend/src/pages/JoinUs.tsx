@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../components/layout/Layout';
+import { trackButtonClick, trackOutboundLink } from '../utils/analytics';
 
 export const JoinUs: React.FC = () => {
   const { t } = useTranslation();
@@ -76,7 +77,11 @@ export const JoinUs: React.FC = () => {
                   {t('membership.formNote')}
                 </p>
                 <button
-                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdeS0CUloDEcA85bUvrWnNRV-jXW_jILE8WXXVj711kYqSEcQ/viewform?usp=publish-editor', '_blank')}
+                  onClick={() => {
+                    trackButtonClick('Open Membership Form', 'Join Us Page');
+                    trackOutboundLink('https://docs.google.com/forms', 'Membership Google Form');
+                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdeS0CUloDEcA85bUvrWnNRV-jXW_jILE8WXXVj711kYqSEcQ/viewform?usp=publish-editor', '_blank');
+                  }}
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-blue-city-primary to-blue-city-accent text-white hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { trackGA4Event } from '../utils/analytics';
 
 const useInView = () => {
   const [isInView, setIsInView] = React.useState(false);
@@ -90,6 +91,18 @@ export const Stories: React.FC = () => {
                   playsInline
                   poster={video.poster}
                   aria-label={video.title}
+                  onPlay={() => {
+                    trackGA4Event('video_play', {
+                      video_title: video.title,
+                      location: 'Home Page Stories Section'
+                    });
+                  }}
+                  onEnded={() => {
+                    trackGA4Event('video_complete', {
+                      video_title: video.title,
+                      location: 'Home Page Stories Section'
+                    });
+                  }}
                 >
                   <source src={`${video.src}#t=0.5`} type="video/mp4" />
                   Your browser does not support the video tag.

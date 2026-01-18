@@ -6,6 +6,7 @@ import { Button } from './ui/Button';
 import { useAuth } from '../hooks/useAuth';
 import { useAuthStore } from '../store/authStore';
 import { ROUTES } from '../utils/constants';
+import { trackGA4Event } from '../utils/analytics';
 
 interface DropdownItem {
   name: string;
@@ -31,8 +32,22 @@ export const Navbar: React.FC = () => {
 
   const changeLanguage = (lang: string) => {
     if (lang !== currentLanguage) {
+      trackGA4Event('language_change', {
+        from_language: currentLanguage,
+        to_language: lang,
+        location: 'Navbar'
+      });
       i18n.changeLanguage(lang);
     }
+  };
+
+  // Helper function to track navigation clicks
+  const trackNavClick = (linkName: string, linkPath: string, isMobile: boolean = false) => {
+    trackGA4Event('navigation_click', {
+      link_name: linkName,
+      link_path: linkPath,
+      device_type: isMobile ? 'mobile' : 'desktop'
+    });
   };
 
   const navItems: NavItem[] = [
@@ -147,6 +162,7 @@ export const Navbar: React.FC = () => {
                             <Link
                               key={subItem.name}
                               to={subItem.path}
+                              onClick={() => trackNavClick(subItem.name, subItem.path)}
                               className={`block px-5 py-3 text-sm text-blue-city-text hover:bg-blue-city-primary/10 hover:text-blue-city-primary transition-colors ${
                                 index !== item.dropdown!.length - 1 ? 'border-b border-gray-100' : ''
                               }`}
@@ -161,6 +177,7 @@ export const Navbar: React.FC = () => {
                 ) : (
                   <Link
                     to={item.path!}
+                    onClick={() => trackNavClick(item.name, item.path!)}
                     className="text-sm text-blue-city-text hover:text-blue-city-primary transition-colors duration-300 font-medium px-0"
                   >
                     {item.name}
@@ -286,6 +303,7 @@ export const Navbar: React.FC = () => {
                               to={subItem.path}
                               className="block py-2.5 px-3 text-sm text-gray-700 hover:text-blue-city-primary hover:bg-white/50 rounded transition-colors"
                               onClick={() => {
+                                trackNavClick(subItem.name, subItem.path, true);
                                 setIsOpen(false);
                                 setOpenMobileDropdown(null);
                               }}
@@ -301,7 +319,10 @@ export const Navbar: React.FC = () => {
                   <Link
                     to={item.path!}
                     className="block py-3 text-blue-city-text hover:text-blue-city-primary transition-colors font-medium"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      trackNavClick(item.name, item.path!, true);
+                      setIsOpen(false);
+                    }}
                   >
                     {item.name}
                   </Link>
