@@ -150,6 +150,7 @@ export const Contact: React.FC = () => {
                   label={t('contact.message')}
                   rows={6}
                   {...form.register('message')}
+                  value={form.watch('message') || ''}
                   error={form.formState.errors.message?.message}
                   required
                   maxLength={500}

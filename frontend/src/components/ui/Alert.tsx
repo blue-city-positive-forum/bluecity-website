@@ -66,7 +66,7 @@ export const AlertContainer: React.FC = () => {
   const hideAlert = useUIStore((state) => state.hideAlert);
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2 max-w-md">
+    <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[60] space-y-3 w-full max-w-md px-4 sm:px-0">
       <AnimatePresence>
         {alerts.map((alert) => {
           const styles = alertStyles[alert.type];
@@ -75,16 +75,18 @@ export const AlertContainer: React.FC = () => {
               key={alert.id}
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95, x: 100 }}
-              className={`${styles.bg} ${styles.border} ${styles.text} border-l-4 p-4 rounded-lg shadow-lg flex items-start space-x-3`}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className={`${styles.bg} ${styles.border} ${styles.text} border-l-4 p-4 rounded-lg shadow-xl flex items-start space-x-3 backdrop-blur-sm`}
             >
               <div className="flex-shrink-0">{styles.icon}</div>
-              <div className="flex-1">
-                <p className="text-sm font-medium">{alert.message}</p>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium break-words">{alert.message}</p>
               </div>
               <button
                 onClick={() => hideAlert(alert.id)}
-                className="flex-shrink-0 hover:opacity-70 transition-opacity"
+                className="flex-shrink-0 hover:opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-1 rounded"
+                aria-label="Close notification"
               >
                 <svg
                   className="w-4 h-4"
